@@ -1,6 +1,7 @@
 import React from "react";
 import asset44 from "../assets/images/asset44.png";
 import heroImg from "../assets/images/heroImg.png";
+import { NavLink } from "react-router-dom";
 const Steps = () => {
   return (
     <section className="max-w-7xl mx-auto my-10">
@@ -20,7 +21,7 @@ const Steps = () => {
             </h1>
 
             <button className="mb-4 rounded-full bg-[#536de6] px-10 py-4 text-lg font-semibold transition-all hover:bg-[#435bc7] hover:scale-105 active:scale-95 shadow-lg">
-              Book A Appointment Now
+              <NavLink to="/book-appointment">Book A Appointment Now</NavLink>
             </button>
 
             <p className="text-sm font-medium text-slate-300">

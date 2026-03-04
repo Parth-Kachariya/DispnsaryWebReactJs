@@ -70,7 +70,7 @@ const AboutUsData = () => {
             </div>
 
             <div className="absolute bottom-[5%] right-[-5%] bg-[#5a67d8] text-white p-8 rounded-[30px] shadow-2xl min-w-[280px]">
-              <div className="absolute -top-6 -right-6 bg-[#0a0a23] p-4 rounded-full border-[6px] border-white">
+              <div className="absolute -top-6 -right-2 bg-[#0a0a23] p-4 rounded-full border-[6px] border-white">
                 <FaClock size={36} />
               </div>
 

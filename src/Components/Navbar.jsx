@@ -1,129 +1,111 @@
-import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { FaAngleDown } from "react-icons/fa6";
-import asset1 from '../assets/asset1.png'
 import { CiMenuBurger } from "react-icons/ci";
-
-
+import { IoClose } from "react-icons/io5";
+import asset1 from '../assets/asset1.png';
 
 const Navbar = () => {
-
-  const [open, setOpen] = useState(false)
-  
+  const [open, setOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const activeClass = ({ isActive }) =>
     isActive
-      ? "block py-2 px-3 text-blue-500 border-b md:p-0 cursor-pointer w-fit mx-auto"
-      : "block py-2 px-3 text-gray-900 rounded w-fit mx-auto hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0";
+      ? "block py-2 px-3 text-blue-500 cursor-pointer text-nowrap"
+      : "block py-2 px-3 text-gray-900 hover:text-blue-500 text-nowrap";
 
   return (
-    <>
-      <div className=''>
-        <nav className="max-w-7xl mx-auto ">
-          <div className="  flex  items-center justify-between mx-auto p-4">
-            {/* logo div */}
-            <div className=''>
-              <img src={asset1} alt="Dispnsary Logo" className="h-15" />
-            </div>
-            {/* Nav div */}
-            <div className="hidden text-nowrap text-center w-full md:block md:w-auto">
-              <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
+    <nav className="bg-white border-b sticky top-0 z-[1000]">
+      <div className="max-w-7xl mx-auto p-4 flex items-center justify-between">
 
-                <li >
-                  <NavLink to="/" end className={activeClass}>
-                    Home
-                  </NavLink>
-                </li>
+        {/* Logo */}
+        <div>
+          <img src={asset1} alt="Logo" className="h-12" />
+        </div>
 
-                <li>
-                  <NavLink to="/about" className={activeClass}>
-                    About Us
-                  </NavLink>
-                </li>
+        {/* Overlay (Mobile Only) */}
+        {open && (
+          <div
+            className="fixed inset-0 bg-black/40 z-40 lg:hidden"
+            onClick={() => setOpen(false)}
+          ></div>
+        )}
 
-                <li>
-                  <NavLink to="/services" className={activeClass}>
-                    Services
-                  </NavLink>
-                </li>
-
-                <li>
-                  <NavLink to="/blog" className={activeClass}>
-                    Blog
-                  </NavLink>
-                </li>
-
-                <li>
-                  <NavLink to="/contact" className={activeClass}>
-                    Contact Us
-                  </NavLink>
-                </li>
-
-
-
-                {/* Dropdown Pages */}
-                <li className="relative z-1000">
-                  <button
-                    onClick={() => setOpen(!open)}
-                    className="block py-2 px-3 hover:text-blue-500 cursor-pointer text-black md:p-0 "
-                  >
-                    Pages <FaAngleDown className="inline ml-1" />
-                  </button>
-
-                  {open && (
-                    <div className="absolute mt-3 text-nowrap bg-indigo-200 rounded-xl p-3 space-y-2  w-48">
-                        <li>
-
-                      <NavLink to="/faq" className={activeClass}>
-                        Faq
-                      </NavLink>
-                        </li>
-
-                      <NavLink to="/doctors" className={activeClass}>
-                        Doctors
-                      </NavLink>
-
-                      <NavLink to="/doctor-details/1" className={activeClass}>
-                        Doctor Details
-                      </NavLink>
-
-                      <NavLink to="/login" className={activeClass}>
-                        Login
-                      </NavLink>
-
-                      <NavLink to="/register" className={activeClass}>
-                        Register
-                      </NavLink>
-
-                      <NavLink to="/random-page" className={activeClass}>
-                        404 Page
-                      </NavLink>
-
-                    </div>
-                  )}
-                </li>
-
-              </ul>
-            </div>
-            {/* button */}
-            <div>
-              <button className=" text-nowrap bg-indigo-500 hover:bg-gray-900 text-white text-lg py-2 px-6 rounded-full">
-                <NavLink to="/book-appointment">
-                  Book Appointment
-                </NavLink>
-              </button>
-            </div>
-            {/* mobile menu */}
-            <div className="md:hidden">
-              <button onClick={() => setOpen(!open)} className="text-gray-900 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">  
-                <CiMenuBurger className="text-3xl" />
-              </button>
-            </div>
+        {/* Sidebar / Navigation */}
+        <div
+          className={`fixed top-0 left-0 h-full w-1/2 bg-white z-50 transform transition-transform duration-300 ease-in-out
+          ${open ? "translate-x-0" : "-translate-x-full"}
+          lg:static lg:translate-x-0 lg:h-auto lg:w-auto lg:bg-transparent lg:block`}
+        >
+          {/* Close Button (Mobile) */}
+          <div className="flex justify-end p-4 lg:hidden">
+            <button onClick={() => setOpen(false)} className="text-2xl">
+              <IoClose />
+            </button>
           </div>
-        </nav>
-      </div>
-    </>
-  )
-}
 
-export default Navbar
+          <ul className="font-medium flex flex-col px-6 space-y-4 lg:flex-row lg:space-y-0 lg:space-x-8 lg:px-0 items-start lg:items-center">
+            
+            <li><NavLink to="/" end className={activeClass} onClick={() => setOpen(false)}>Home</NavLink></li>
+            <li><NavLink to="/about" className={activeClass} onClick={() => setOpen(false)}>About Us</NavLink></li>
+            <li><NavLink to="/services" className={activeClass} onClick={() => setOpen(false)}>Services</NavLink></li>
+            <li><NavLink to="/blog" className={activeClass} onClick={() => setOpen(false)}>Blog</NavLink></li>
+            <li><NavLink to="/contact" className={activeClass} onClick={() => setOpen(false)}>Contact Us</NavLink></li>
+
+            {/* Dropdown */}
+            <li className="w-full lg:w-auto">
+              <button
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className="flex items-center py-2 text-black hover:text-blue-500"
+              >
+                Pages
+                <FaAngleDown className={`ml-1 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              <div className={`${dropdownOpen ? "flex" : "hidden"} flex-col bg-indigo-100 rounded-xl p-3 space-y-2 mt-2 lg:absolute lg:mt-3 lg:w-48`}>
+                <NavLink to="/faq" className={activeClass} onClick={() => {setOpen(false); setDropdownOpen(false)}}>Faq</NavLink>
+                <NavLink to="/doctors" className={activeClass} onClick={() => {setOpen(false); setDropdownOpen(false)}}>Doctors</NavLink>
+                <NavLink to="/doctor-details/1" className={activeClass} onClick={() => {setOpen(false); setDropdownOpen(false)}}>Doctor Details</NavLink>
+                <NavLink to="/login" className={activeClass} onClick={() => {setOpen(false); setDropdownOpen(false)}}>Login</NavLink>
+                <NavLink to="/register" className={activeClass} onClick={() => {setOpen(false); setDropdownOpen(false)}}>Register</NavLink>
+                <NavLink to="/random-page" className={activeClass} onClick={() => {setOpen(false); setDropdownOpen(false)}}>404 Page</NavLink>
+              </div>
+            </li>
+
+            {/* Mobile Book Appointment */}
+            <li className="pt-4 lg:hidden w-full">
+              <NavLink
+                to="/book-appointment"
+                onClick={() => setOpen(false)}
+                className="block text-center bg-indigo-500 text-white py-2 px-6 rounded-full w-full"
+              >
+                Book Appointment
+              </NavLink>
+            </li>
+
+          </ul>
+        </div>
+
+        {/* Desktop Book Appointment */}
+        <div className="hidden lg:block">
+          <NavLink
+            to="/book-appointment"
+            className="text-nowrap bg-indigo-500 hover:bg-gray-900 text-white py-2 px-6 rounded-full transition-all"
+          >
+            Book Appointment
+          </NavLink>
+        </div>
+
+        {/* Burger Icon */}
+        <div className="lg:hidden">
+          <button onClick={() => setOpen(true)} className="text-gray-900 text-3xl">
+            <CiMenuBurger />
+          </button>
+        </div>
+
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
