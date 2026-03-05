@@ -4,6 +4,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import asset46 from "../../assets/images/asset46.jpeg";
 import asset47 from "../../assets/images/asset47.jpeg";
 import asset48 from "../../assets/images/asset48.jpeg";
+import Backimg from '../../assets/Backimg.svg'
 
 const Testimonials = () => {
   const scrollRef = useRef(null);
@@ -46,7 +47,9 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="relative px-6 py-20 font-sans">
+    <section
+        style={{backgroundImage:`url(${Backimg})`}}
+      className="relative px-6 py-20 max-w-7xl mx-auto">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
           <div className="mb-4 flex items-center justify-center gap-2 text-[#536de6] font-semibold">

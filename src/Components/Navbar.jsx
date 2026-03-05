@@ -90,7 +90,7 @@ const Navbar = () => {
         <div className="hidden lg:block">
           <NavLink
             to="/book-appointment"
-            className="text-nowrap bg-indigo-500 hover:bg-gray-900 text-white py-2 px-6 rounded-full transition-all"
+            className="text-nowrap bg-indigo-500 hover:bg-gray-900 text-white py-3 px-6 rounded-full transition-all"
           >
             Book Appointment
           </NavLink>

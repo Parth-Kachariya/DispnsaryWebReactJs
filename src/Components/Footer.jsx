@@ -71,22 +71,19 @@ const Footer = () => {
         </div>
 
         {/* social icon */}
-        <div className='flex  sm:flex-row items-center gap-6 py-6'>
+        <div className='flex flex-col sm:flex-row items-center gap-6 py-6'>
           <hr className='w-full text-white/20' />
-
           <div className='flex items-center'>
             <a className='mx-3 p-2 bg-indigo-400/20 rounded-full text-xl' href=""><FaDribbble/></a>
             <a className='mx-3 p-2 bg-indigo-400/20 rounded-full text-xl' href=""><FaFacebookF/></a>
             <a className='mx-3 p-2 bg-indigo-400/20 rounded-full text-xl' href=""><FaInstagram/></a>
           </div>
-
           <hr className='w-full text-white/20' />
         </div>
 
         {/* copy right */}
         <div className='flex flex-col md:flex-row justify-between items-center text-lg py-5 gap-4 text-center md:text-left'>
           <p>Copyright © {new Date().getFullYear()} All Rights Reserved.</p>
-
           <p className='flex items-center justify-center flex-wrap'>
             Privacy Policy
             <span className='h-2 w-2 bg-indigo-600 rounded-full mx-2'></span>

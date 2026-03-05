@@ -10,7 +10,7 @@ import doctor7 from "../../assets/images/doctor7.jpeg";
 import doctor8 from "../../assets/images/doctor8.jpeg";
 import asset43 from "../../assets/images/asset43.png";
 import google from "../../assets/google.svg";
-import { CiCirclePlus } from "react-icons/ci";
+import { IoAddOutline } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa";
 import { FaStethoscope } from "react-icons/fa6";
 
@@ -92,7 +92,7 @@ const Numbers = () => {
               ))}
             </div>
             <button className="bg-white p-3 rounded-full shadow-md hover:scale-105 transition">
-              <CiCirclePlus size={28} className="text-indigo-600" />
+              <IoAddOutline size={28} className="text-indigo-600" />
             </button>
           </div>
         </div>

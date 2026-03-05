@@ -6,7 +6,6 @@ import HealthCard from "../Components/Services/HealthCard";
 import Member from "../Components/Home/Member";
 import Testimonials from "../Components/Home/Testimonials";
 import HelthCare from "../Components/Home/HelthCare";
-import Backimg from "../assets/Backimg.svg";
 import Steps from "../Components/Steps";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaStethoscope } from "react-icons/fa6";
@@ -193,12 +192,7 @@ const AboutUs = () => {
       </section>
       <Steps />
       <HelthCare />
-      <section
-        style={{ backgroundImage: `url(${Backimg})` }}
-        className="max-w-7xl mx-auto "
-      >
-        <Testimonials />
-      </section>
+      <Testimonials />
     </section>
   );
 };

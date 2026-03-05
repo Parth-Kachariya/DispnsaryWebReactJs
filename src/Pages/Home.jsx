@@ -6,11 +6,7 @@ import doctor2 from "../assets/images/doctor2.jpeg";
 import doctor3 from "../assets/images/doctor3.jpeg";
 import doctor4 from "../assets/images/doctor4.jpeg";
 import heroImg from "../assets/images/heroImg.png";
-import Backimg from "../assets/Backimg.svg";
-import Stethoscope1 from "../assets/images/Stethoscope1.png";
-import { NavLink } from "react-router-dom";
 import HealthCard from "../Components/Services/HealthCard";
-import Card, { servicesData } from "../Components/Services/Card";
 import Number from "../Components/Home/Number";
 import HelthCare from "../Components/Home/HelthCare";
 import Member from "../Components/Home/Member";
@@ -20,6 +16,8 @@ import AboutUsData from "../Components/AboutUsData";
 import VideoSection from "../Components/VideoSection";
 import Steps from "../Components/Steps";
 import BlogCard from "../Components/BlogCard";
+import OurServices from "../Components/OurServices";
+import { NavLink } from "react-router-dom";
 const Home = () => {
   const doctors = [doctor1, doctor2, doctor3, doctor4];
   const [count, setCount] = useState(0);
@@ -69,10 +67,10 @@ const Home = () => {
 
               <div className="flex flex-wrap gap-4">
                 <button className="bg-[#5a67d8] text-white text-nowrap cursor-pointer px-8 py-4 rounded-full font-semibold hover:bg-[#4c51bf] transition-all shadow-lg shadow-indigo-200">
-                  Book A Appointment
+                  <NavLink to="/book-appointment">Book A Appointment</NavLink>
                 </button>
                 <button className="bg-[#5a67d8] text-white text-nowrap cursor-pointer px-10 py-4 rounded-full font-semibold hover:bg-[#4c51bf] transition-all">
-                  About Us
+                  <NavLink to="/about">About Us</NavLink>
                 </button>
               </div>
 
@@ -83,7 +81,7 @@ const Home = () => {
                     <span className="text-yellow-500 ml-1">5.0</span>
                   </span>
                   <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
+                    {[1, 2, 3, 4, 5].map((i) => (
                       <FaStar key={i} size={16} fill="currentColor" />
                     ))}
                   </div>
@@ -138,49 +136,7 @@ const Home = () => {
         </div>
       </section>
       <AboutUsData />
-      <section>
-        <div className=" max-w-7xl mx-auto rounded-3xl bg-[#f8f9ff] py-25 px-6 relative overflow-hidden font-sans">
-          <div className="max-w-7xl mx-auto text-center mb-16">
-            <div className="flex justify-center items-center space-x-2 text-[#5a67d8] mb-4">
-              <FaStethoscope size={25} />
-              <span className="font-bold text-sm uppercase tracking-wider">
-                Our Services
-              </span>
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-[#1a202c]">
-              Comprehensive services for <br /> your health
-            </h2>
-          </div>
-
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {servicesData.slice(0, 3).map((s) => (
-              <Card
-                key={s.id}
-                icon={s.icon}
-                heading={s.heading}
-                description={s.description}
-                image={s.image}
-              />
-            ))}
-          </div>
-
-          <div className="max-w-2xl mx-auto text-center mt-16 space-y-8">
-            <p className="text-gray-500 text-lg leading-relaxed px-4">
-              From preventive care to specialized treatments, our wide range of
-              services is designed to support your health at every stage.
-            </p>
-            <button className="bg-[#5a67d8] text-white px-10 py-4 rounded-full font-semibold hover:bg-[#4c51bf] transition-all shadow-lg shadow-indigo-100">
-              <NavLink to="/services">View All Services</NavLink>
-            </button>
-          </div>
-
-          <img
-            src={Stethoscope1}
-            className="absolute bottom-[-20px] right-0 w-48 opacity-80 hidden lg:block"
-            alt="deco"
-          />
-        </div>
-      </section>
+      <OurServices />
       <VideoSection />
       <HealthCard />
       <Number />
@@ -188,12 +144,7 @@ const Home = () => {
       <Member limit={4} showHeading={true} />
       <Numbers />
       <Steps />
-      <section
-        style={{ backgroundImage: `url(${Backimg})` }}
-        className="max-w-7xl mx-auto "
-      >
-        <Testimonials />
-      </section>
+      <Testimonials />
       <BlogCard limit={3} showHeader={true} />
     </>
   );

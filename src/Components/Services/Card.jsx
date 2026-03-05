@@ -13,7 +13,7 @@ import cardimg4 from "../../assets/images/cardimg4.jpg";
 import cardimg5 from "../../assets/images/cardimg5.jpg";
 import cardimg6 from "../../assets/images/cardimg6.jpg";
 
-export const servicesData = [
+const servicesData = [
   {
     id: 1,
     icon: iconService1,
@@ -64,30 +64,39 @@ export const servicesData = [
   },
 ];
 
-const Card = (props) => {
+const Card = ({ number }) => {
   console.log(servicesData);
 
   return (
-    <div className="border border-gray-300 rounded-3xl w-95  p-8">
-      <div className="flex justify-between items-center p-4">
-        <div className="flex gap-4 items-center">
-          <img
-            className="bg-indigo-500 hover:bg-gray-900 w-13 h-13 rounded-3xl p-3"
-            src={props.icon}
-            alt="icon"
-          />
-          <h3 className="text-xl font-semibold">{props.heading}</h3>
-        </div>
-        <span className="cursor-pointer">
-          <FaArrowRight className="text-black" />
-        </span>
-      </div>
-      <div className="flex flex-col  text-left gap-6">
-        <hr className="text-gray-300" />
-        <p>{props.description}</p>
-        <img className="rounded-4xl" src={props.image} alt="card image" />
-      </div>
-    </div>
+    <>
+      {servicesData.slice(0, number).map((item, id) => {
+        return (
+          <div
+            key={id}
+            className="border border-gray-300 rounded-3xl max-w-95  p-8 mx-2 md:mx-0"
+          >
+            <div className="flex justify-between items-center p-4">
+              <div className="flex gap-4 items-center">
+                <img
+                  className="bg-indigo-500 hover:bg-gray-900 w-13 h-13 rounded-3xl p-3"
+                  src={item.icon}
+                  alt="icon"
+                />
+                <h3 className="text-xl font-semibold">{item.heading}</h3>
+              </div>
+              <span className="cursor-pointer">
+                <FaArrowRight className="text-black" />
+              </span>
+            </div>
+            <div className="flex flex-col  text-left gap-6">
+              <hr className="text-gray-300" />
+              <p>{item.description}</p>
+              <img className="rounded-4xl" src={item.image} alt="card image" />
+            </div>
+          </div>
+        );
+      })}
+    </>
   );
 };
 
