@@ -15,7 +15,7 @@ const Navbar = () => {
       : "block py-2 px-3 text-gray-900 hover:text-blue-500 text-nowrap";
 
   return (
-    <nav className="bg-white border-b sticky top-0 z-[1000]">
+    <nav className="bg-white border-b sticky top-0 z-[1000] px-2">
       <div className="max-w-7xl mx-auto p-4 flex items-center justify-between">
 
         {/* Logo */}

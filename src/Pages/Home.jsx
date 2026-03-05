@@ -42,7 +42,7 @@ const Home = () => {
 
   return (
     <>
-      <section>
+      <section className="px-3 md:px-0">
         <div className="relative max-w-7xl mx-auto w-full bg-[#f3f4ff] rounded-3xl overflow-hidden font-sans">
           <div className="absolute top-[-10%] left-[-5%] w-[30%] h-[40%] bg-[#e0e3ff] rounded-full blur-3xl opacity-60" />
           <div className="absolute bottom-[-10%] right-[-5%] w-[30%] h-[40%] bg-[#e0e3ff] rounded-full blur-3xl opacity-60" />
@@ -134,18 +134,18 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <AboutUsData />
+        <OurServices />
+        <VideoSection />
+        <HealthCard />
+        <Number />
+        <HelthCare />
+        <Member limit={4} showHeading={true} />
+        <Numbers />
+        <Steps />
+        <Testimonials />
+        <BlogCard limit={3} showHeader={true} />
       </section>
-      <AboutUsData />
-      <OurServices />
-      <VideoSection />
-      <HealthCard />
-      <Number />
-      <HelthCare />
-      <Member limit={4} showHeading={true} />
-      <Numbers />
-      <Steps />
-      <Testimonials />
-      <BlogCard limit={3} showHeader={true} />
     </>
   );
 };

@@ -6,7 +6,7 @@ import Testimonials from "../Components/Home/Testimonials";
 import PageHeader from "../Components/PageHeader";
 const Services = () => {
   return (
-    <section className=" max-w-7xl mx-auto  text-center">
+    <section className=" max-w-7xl mx-auto  text-center px-3 md:px-0">
       <PageHeader title="Services" Link="Home" badge="Services" />
       <section className="py-20 flex flex-wrap gap-10 justify-center">
         <Card number={6} />

@@ -9,7 +9,7 @@ import { CiCalendar } from "react-icons/ci";
 import { FaChevronDown } from "react-icons/fa";
 export const BookAppointment = () => {
   return (
-    <section className="max-w-7xl mx-auto ">
+    <section className="max-w-7xl mx-auto px-3 md:px-0">
       <PageHeader
         title="Make an appointment"
         Link="Home"

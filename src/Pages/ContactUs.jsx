@@ -24,12 +24,12 @@ const ContactInfoCard = [
 const ContactUs = () => {
   return (
     <>
-      <section className="mx-w-7xl mx-auto ">
+      <section className="mx-w-7xl mx-auto px-3 md:px-0">
         <PageHeader title="Contact us" Link="Home" badge="Contact us" />
 
         <div>
           <div className="   p-4 md:p-10">
-            <div className="mx-auto max-w-7xl rounded-[3.5rem] bg-white p-10 md:p-20 shadow-sm border border-slate-100">
+            <div className="mx-auto max-w-7xl rounded-[3.5rem] bg-white p-6 md:p-20 shadow-sm border border-slate-100">
               <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
                 <div className="lg:col-span-5 flex flex-col gap-6">
                   <div className="flex flex-col gap-8">
@@ -53,7 +53,7 @@ const ContactUs = () => {
                     })}
                   </div>
 
-                  <div className="mt-8 flex items-center gap-6">
+                  <div className="mt-8 flex flex-col md:flex-row items-center gap-6">
                     <span className="text-xl font-bold text-[#0a0e27]">
                       Follow Us:
                     </span>

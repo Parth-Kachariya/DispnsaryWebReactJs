@@ -7,7 +7,7 @@ import { CiLock } from "react-icons/ci";
 
 const Login = () => {
   return (
-    <section className="max-w-7xl mx-auto">
+    <section className="max-w-7xl mx-auto px-3 md:px-0">
       <PageHeader title="Login Page" Link="Home" badge="Login" />
       <div className=" flex items-center justify-center p-6 font-sans">
         <div className="bg-[#f3f3ff] w-full max-w-5xl rounded-[3rem] shadow-xl overflow-hidden flex flex-col md:flex-row min-h-[600px]">

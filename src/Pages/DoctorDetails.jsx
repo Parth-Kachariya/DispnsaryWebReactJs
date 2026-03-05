@@ -5,7 +5,7 @@ import member1 from "../assets/images/member1.jpeg";
 
 const DoctorDetails = () => {
   return (
-    <section className="max-w-7xl mx-auto">
+    <section className="max-w-7xl mx-auto px-3 md:px-0">
       <PageHeader
         title="Dr. esther howard"
         Link="Home"
