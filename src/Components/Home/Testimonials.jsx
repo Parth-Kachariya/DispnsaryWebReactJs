@@ -49,7 +49,7 @@ const Testimonials = () => {
   return (
     <section
         style={{backgroundImage:`url(${Backimg})`}}
-      className="relative px-6 py-20 max-w-7xl mx-auto">
+      className="relative py-20 max-w-7xl mx-auto">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
           <div className="mb-4 flex items-center justify-center gap-2 text-[#536de6] font-semibold">

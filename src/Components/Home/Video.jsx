@@ -25,7 +25,7 @@ const Video = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 pb-15">
+    <div className="max-w-7xl mx-auto pb-15">
       <div className="relative h-[600px] w-full rounded-[40px] overflow-hidden group">
         <img
           src={videoimg}

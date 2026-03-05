@@ -21,8 +21,8 @@ const VideoSection = () => {
             care apart. Discover what sets our care apart.
           </p>
         </div>
-        <div className="flex justify-between items-center">
-          <ul className="flex flex-col gap-5">
+        <div className="flex justify-between items-center mt-6 md:mt-0">
+          <ul className="flex flex-col gap-5 ">
             <li className="flex  items-center gap-3 text-gray-600">
               <span className="p-1 bg-indigo-500 text-white rounded-full">
                 <TiTick />

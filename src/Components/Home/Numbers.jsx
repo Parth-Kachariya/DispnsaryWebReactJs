@@ -18,7 +18,7 @@ const Numbers = () => {
   const doctors = [doctor5, doctor6, doctor7, doctor8];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 relative overflow-hidden">
+    <section className="max-w-7xl mx-auto relative overflow-hidden">
       <div className="text-center mb-12 mt-10">
         <div className="flex justify-center items-center gap-2 text-[#5a67d8] mb-4">
           <FaStethoscope size={20} />

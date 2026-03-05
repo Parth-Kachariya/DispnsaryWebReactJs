@@ -43,7 +43,7 @@ const Member = ({ limit, showHeading = true }) => {
 
   return (
     <section className="py-24 bg-white font-sans">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto ">
         {/* Heading */}
         {showHeading && (
           <div className="text-center mb-20 space-y-4">
