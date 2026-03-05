@@ -56,8 +56,8 @@ const Testimonials = () => {
             <FaStethoscope size={20} />
             <span>Testimonials</span>
           </div>
-          <h2 className="mb-6 text-4xl font-bold text-[#0a0e27] md:text-5xl lg:text-6xl">
-            Patient stories of care and <br /> recovery
+          <h2 className=" max-w-3xl mx-auto mb-6 text-4xl font-bold text-[#0a0e27] md:text-5xl lg:text-6xl">
+            Patient stories of care and recovery
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-slate-500">
             Discover inspiring stories of recovery and healing from those we've had the privilege to serve.
