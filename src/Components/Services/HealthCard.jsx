@@ -53,7 +53,7 @@ const HealthCard = () => {
               care, innovative treatments, and a focus on prevention.
             </p>
           </div>
-          <div className="flex flex-wrap mt-10">
+          <div className="flex flex-wrap mt-10 ">
             {HealthCardData.map((card, key) => {
               return (
                 <div className=" w-75 " key={key}>
@@ -69,8 +69,8 @@ const HealthCard = () => {
                         0{card.id}
                       </span>
                     </div>
-                    <div className="flex flex-col gap-4 py-4">
-                      <h3 className="font-semibold text-xl text-gray-900">
+                    <div className="flex flex-col gap-4 py-4 z-1">
+                      <h3 className=" font-semibold text-xl text-gray-900">
                         {card.heading}
                       </h3>
                       <p className="max-w-xs text-lg text-gray-700">
@@ -86,7 +86,7 @@ const HealthCard = () => {
         <img
           src={asset60}
           alt="Asset 60"
-          className="w-40 absolute bottom-8 -left-2 opacity-70"
+          className="w-40  absolute bottom-8 -left-2 opacity-70"
         />
       </section>
     </>

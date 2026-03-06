@@ -7,7 +7,7 @@ import Card from "./Services/Card";
 const OurServices = () => {
   return (
     <section>
-      <div className=" max-w-7xl mx-auto rounded-3xl bg-[#f8f9ff] py-25 px-3 relative overflow-hidden font-sans">
+      <div className=" max-w-7xl mx-auto rounded-3xl bg-[#f8f9ff] py-25 px-3 relative overflow-hidden ">
         <div className="max-w-7xl mx-auto text-center mb-16">
           <div className="flex justify-center items-center space-x-2 text-[#5a67d8] mb-4">
             <FaStethoscope size={25} />

@@ -44,7 +44,7 @@ const AboutUs = () => {
     },
   ];
   return (
-    <section className="max-w-7xl mx-auto px-3 md:px-0">
+    <section className="max-w-7xl mx-auto px-3">
       <PageHeader title="About us" Link="Home" badge="About Us" />
       <AboutUsData />
       <section>
@@ -130,7 +130,7 @@ const AboutUs = () => {
       <VideoSection />
       <HealthCard />
       <Member />
-      <section className="relative overflow-hidden bg-[#f3f4ff] px-6 py-24 font-sans rounded-[3.5rem] mx-4 my-8">
+      <section className="relative overflow-hidden bg-[#f3f4ff] px-6 py-24  rounded-[3.5rem] mx-4 my-8">
         <div className="absolute bottom-0 right-0 opacity-80">
           <img
             src={Stethoscope1}

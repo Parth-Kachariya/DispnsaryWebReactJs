@@ -96,13 +96,13 @@ const Testimonials = () => {
         <div className="mt-12 flex justify-center gap-4">
           <button
             onClick={() => scroll("left")}
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-[#536de6] text-white transition-colors hover:bg-[#435bc7]"
+            className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-[#536de6] text-white transition-colors hover:bg-[#435bc7]"
           >
             <FaArrowLeft size={20} />
           </button>
           <button
             onClick={() => scroll("right")}
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-[#536de6] text-white transition-colors hover:bg-[#435bc7]"
+            className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-[#536de6] text-white transition-colors hover:bg-[#435bc7]"
           >
             <FaArrowRight size={20} />
           </button>

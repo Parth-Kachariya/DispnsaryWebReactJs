@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Error404 = () => {
   return (
     <>
-      <section className="max-w-7xl mx-auto px-3 md:px-0 ">
+      <section className="max-w-7xl mx-auto px-3 ">
         <PageHeader title="Page not found" Link="Home" badge="404 Error" />
 
         <div className="flex flex-col justify-center p-20">

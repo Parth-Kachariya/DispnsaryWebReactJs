@@ -42,9 +42,8 @@ const Member = ({ limit, showHeading = true }) => {
   const displayedMembers = limit ? teamMembers.slice(0, limit) : teamMembers;
 
   return (
-    <section className="py-24 bg-white font-sans">
+    <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto ">
-        {/* Heading */}
         {showHeading && (
           <div className="text-center mb-20 space-y-4">
             <div className="flex justify-center items-center gap-2 text-[#5a67d8]">

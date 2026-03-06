@@ -26,7 +26,7 @@ const Number = () => {
   ];
 
   return (
-    <section className="py-24 bg-white font-sans overflow-hidden">
+    <section className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <div className="flex justify-center items-center gap-2 text-[#5a67d8] mb-4">

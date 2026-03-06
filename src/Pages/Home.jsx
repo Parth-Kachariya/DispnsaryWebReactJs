@@ -42,8 +42,8 @@ const Home = () => {
 
   return (
     <>
-      <section className="px-3 md:px-0">
-        <div className="relative max-w-7xl mx-auto w-full bg-[#f3f4ff] rounded-3xl overflow-hidden font-sans">
+      <section className="px-3">
+        <div className="relative max-w-7xl mx-auto w-full bg-[#f3f4ff] rounded-3xl overflow-hidden ">
           <div className="absolute top-[-10%] left-[-5%] w-[30%] h-[40%] bg-[#e0e3ff] rounded-full blur-3xl opacity-60" />
           <div className="absolute bottom-[-10%] right-[-5%] w-[30%] h-[40%] bg-[#e0e3ff] rounded-full blur-3xl opacity-60" />
 

@@ -5,13 +5,13 @@ import member1 from "../assets/images/member1.jpeg";
 
 const DoctorDetails = () => {
   return (
-    <section className="max-w-7xl mx-auto px-3 md:px-0">
+    <section className="max-w-7xl mx-auto px-3">
       <PageHeader
         title="Dr. esther howard"
         Link="Home"
         badge="Dr. esther howard"
       />
-      <div className="flex flex-col md:flex-row h-screen my-8  overflow-hidden font-sans">
+      <div className="flex flex-col md:flex-row h-screen my-8  overflow-hidden ">
         <div className="w-full md:w-[400px] bg-[#f3f3ff] h-full rounded-[3rem] flex flex-col z-10 overflow-hidden">
           <div className="rounded-[2.5rem] overflow-hidden flex-1">
             <img

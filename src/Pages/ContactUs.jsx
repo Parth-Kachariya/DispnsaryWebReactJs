@@ -24,7 +24,7 @@ const ContactInfoCard = [
 const ContactUs = () => {
   return (
     <>
-      <section className="mx-w-7xl mx-auto px-3 md:px-0">
+      <section className="mx-w-7xl mx-auto px-3">
         <PageHeader title="Contact us" Link="Home" badge="Contact us" />
 
         <div>
@@ -39,7 +39,7 @@ const ContactUs = () => {
                           key={index}
                           className="flex items-center gap-5 rounded-3xl bg-[#f3f4ff] p-6 transition-transform hover:scale-[1.02]"
                         >
-                          <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#536de6] text-white">
+                          <div className="flex h-14 w-14 px-4 items-center justify-center rounded-full bg-[#536de6] text-white">
                             <item.icon size={24} />
                           </div>
                           <div>
@@ -129,7 +129,7 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
-        <div className="bg-white py-16 px-4 font-sans">
+        <div className="bg-white py-16 px-4 ">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <div className="flex items-center justify-center gap-2 text-indigo-600 mb-4">
               <FaStethoscope size={20} />

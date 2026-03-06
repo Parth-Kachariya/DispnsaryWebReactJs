@@ -57,7 +57,7 @@ const BlogCard = ({ showHeader = true, limit }) => {
   const displayArticles = limit ? articles.slice(0, limit) : articles;
 
   return (
-    <section className="bg-white py-24 font-sans">
+    <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl">
         {/* Header (Optional) */}
         {showHeader && (

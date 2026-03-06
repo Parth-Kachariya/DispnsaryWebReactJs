@@ -8,9 +8,9 @@ import { LuLock } from "react-icons/lu";
 
 const Register = () => {
   return (
-    <section className="max-w-7xl mx-auto px-3 md:px-0">
+    <section className="max-w-7xl mx-auto px-3">
       <PageHeader title="Register Page" Link="home" badge="Register" />
-      <div className="overflow-hidden  flex items-center justify-center p-10 my-10 font-sans">
+      <div className="overflow-hidden  flex items-center justify-center p-10 my-10">
         <div className="bg-[#f3f3ff] overflow-hidden relative  w-full max-w-4xl rounded-[3rem] shadow-xl p-8 md:p-16">
           <div className="max-w-xl mx-auto text-center mb-12">
             <h1 className="text-4xl font-bold text-slate-900 mb-4">

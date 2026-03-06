@@ -14,7 +14,7 @@ const AboutUsData = () => {
   ];
   return (
     <section>
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 font-sans text-[#1a202c]">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20  text-[#1a202c]">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           <div className="w-full lg:w-1/2 space-y-6">
             <div className="flex items-center space-x-2 text-[#5a67d8]">

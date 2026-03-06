@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* body {
+  font-family: "Paprika", system-ui;
+  
+} */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
