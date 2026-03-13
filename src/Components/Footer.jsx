@@ -7,25 +7,26 @@ import { CiLocationOn } from "react-icons/ci";
 
 const Footer = () => {
   return (
-    <footer className="max-w-7xl w-full rounded-4xl mx-auto bg-[#0b1030] text-white mb-6 px-4 mx-2">
-      <div className='flex flex-col p-6 md:p-8'>
+    <footer className=" px-3 mt-4">
+      <div className=' max-w-7xl w-full rounded-4xl mx-auto bg-[#0b1030] text-white mb-6 px-4 flex flex-col p-6 md:p-8'>
 
         {/* content div */}
         <div className='flex flex-col lg:flex-row justify-between w-full items-start lg:items-center gap-10 py-5'>
 
           {/* logo */}
-          <div className='flex flex-col gap-4 max-w-sm'>
+          <div className='flex flex-col  gap-4 max-w-sm'>
             <img className='h-14 w-fit' src={footerLogo} alt="Footer Logo" />
-            <p className='text-lg'>
+            <p className='text-lg  max-w-sm '>
               We offer a wide range of healthcare services to meet your needs.
             </p>
           </div>
 
           {/* links */}
-          <div className='flex flex-col sm:flex-row flex-wrap justify-between w-full lg:w-4/7 gap-14'>
+          {/* <div className='flex flex-col sm:flex-row flex-wrap justify-between w-full lg:w-4/7 gap-14'> */}
+          <div className=' w-full  md:w-auto grid grid-cols-2  sm:grid-cols-3 lg:grid-cols-3  gap-6 md:gap-10 '>
 
             {/* healthcare */}
-            <div className='flex flex-col gap-4'>
+            <div className='flex flex-col gap-4 '>
               <h2 className='text-xl font-bold capitalize'>healthcare</h2>
               <ul className='list-disc pl-6 marker:text-indigo-500 text-lg'>
                 <li className='py-1'><a href="">doctors</a></li>
@@ -49,7 +50,7 @@ const Footer = () => {
             </div>
 
             {/* contact us */}
-            <div className='flex flex-col gap-4'>
+            <div className='flex flex-col gap-4 col-span-2 sm:col-span-1 '>
               <h2 className='text-xl font-bold capitalize'>contact us</h2>
               <ul className='flex flex-col gap-3 text-lg'>
                 <li className='flex items-start'>
@@ -83,8 +84,8 @@ const Footer = () => {
 
         {/* copy right */}
         <div className='flex flex-col md:flex-row justify-between items-center text-lg py-5 gap-4 text-center md:text-left'>
-          <p>Copyright © {new Date().getFullYear()} All Rights Reserved.</p>
-          <p className='flex items-center justify-center flex-wrap'>
+          <p className='text-sm'>Copyright © {new Date().getFullYear()} All Rights Reserved.</p>
+          <p className='flex items-center justify-center flex-wrap text-sm'>
             Privacy Policy
             <span className='h-2 w-2 bg-indigo-600 rounded-full mx-2'></span>
             Terms & Conditions

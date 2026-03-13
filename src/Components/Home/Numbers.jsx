@@ -40,7 +40,7 @@ const Numbers = () => {
       {/* Top Section */}
       <div className="flex flex-col lg:flex-row gap-8 my-10">
         {/* Left Card */}
-        <div className="flex flex-col sm:flex-row bg-indigo-400/40 p-6 rounded-3xl flex-1">
+        <div className="flex flex-col sm:flex-row bg-indigo-400/20 p-6 rounded-3xl flex-1">
           <div className="flex flex-col gap-6">
             <img className="w-24" src={asset34} alt="" />
             <h4 className="text-lg md:text-xl font-semibold">
@@ -70,7 +70,7 @@ const Numbers = () => {
         </div>
 
         {/* Google Review Card */}
-        <div className="flex flex-col gap-6 bg-indigo-500/30 p-8 rounded-3xl lg:w-1/3">
+        <div className="flex flex-col gap-6 bg-indigo-500/20 p-8 rounded-3xl lg:w-1/3">
           <img className="w-32 mx-auto" src={google} alt="" />
 
           <h5 className="text-xl md:text-2xl font-bold text-center text-gray-900">
@@ -98,7 +98,7 @@ const Numbers = () => {
         </div>
 
         {/* Right Text Card */}
-        <div className="flex flex-col sm:flex-row bg-indigo-500/30 p-6 rounded-3xl lg:w-1/3">
+        <div className="flex flex-col sm:flex-row bg-indigo-500/20 p-6 rounded-3xl lg:w-1/3">
           <div className="flex flex-col gap-3">
             <h3 className="text-lg md:text-xl text-gray-900 font-semibold">
               Healing Starts Here Caring for You Always

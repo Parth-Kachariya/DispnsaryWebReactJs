@@ -57,16 +57,16 @@ const BlogCard = ({ showHeader = true, limit }) => {
   const displayArticles = limit ? articles.slice(0, limit) : articles;
 
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-10 md:py-24">
       <div className="mx-auto max-w-7xl">
         {/* Header (Optional) */}
         {showHeader && (
-          <div className="mb-16 text-center">
+          <div className=" mb-6 md:mb-16 text-center">
             <div className="mb-4 flex items-center justify-center gap-2 text-[#536de6] font-semibold">
               <FaStethoscope size={20} />
               <span>Latest News</span>
             </div>
-            <h2 className="mb-6 text-4xl font-bold text-[#0a0e27] md:text-5xl lg:text-6xl">
+            <h2 className="mb-6 text-2xl font-bold text-[#0a0e27] md:text-5xl lg:text-6xl">
               Health updates you need to <br /> know
             </h2>
             <p className="mx-auto max-w-2xl text-slate-500 leading-relaxed">
@@ -92,7 +92,7 @@ const BlogCard = ({ showHeader = true, limit }) => {
                 <span>{article.date}</span>
               </div>
 
-              <h3 className="mb-4 text-2xl font-bold leading-tight text-[#0a0e27] transition-colors group-hover:text-[#536de6]">
+              <h3 className="mb-4 text-xl md:text-2xl font-bold leading-tight text-[#0a0e27] transition-colors group-hover:text-[#536de6]">
                 {article.title}
               </h3>
 

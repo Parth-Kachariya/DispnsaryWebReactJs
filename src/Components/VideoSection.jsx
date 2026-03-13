@@ -6,16 +6,16 @@ import Video from "./Home/Video";
 const VideoSection = () => {
   return (
     <section className="max-w-7xl mx-auto ">
-      <div className="py-20 flex flex-wrap md:flex-nowrap p-2 justify-between">
+      <div className=" py-10  md:py-20 flex flex-wrap md:flex-nowrap p-2 justify-between">
         <div className="flex flex-col gap-5">
           <p className="flex items-center gap-2 text-lg text-indigo-600 font-semibold">
             <FaStethoscope size={25} />
             why choose us
           </p>
-          <h3 className="text-gray-900 text-5xl max-w-3xl font-bold">
+          <h3 className="text-gray-900 text-2xl  md:text-5xl max-w-3xl font-bold">
             Why patients trust us with their care
           </h3>
-          <p className="text-gray-500 text-lg max-w-2xl">
+          <p className="text-gray-500 md:text-lg max-w-2xl">
             Our commitment to excellence, compassion, and personalized treatment
             has earned the trust of countless patients. Discover what sets our
             care apart. Discover what sets our care apart.

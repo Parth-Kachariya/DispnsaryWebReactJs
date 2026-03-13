@@ -17,7 +17,7 @@ const HelthCare = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="bg-[#e8ebff] max-w-7xl mx-auto rounded-3xl py-24 px-6 lg:px-12">
+    <section className="bg-[#e8ebff] max-w-7xl mx-auto rounded-3xl py-10  md:py-24 px-3 md:px-6 lg:px-12">
       <div className=" flex flex-col justify-between  lg:flex-row gap-16">
 
         <div className="w-full lg:w-6/12 space-y-8">
@@ -26,14 +26,14 @@ const HelthCare = () => {
             <span className="font-semibold text-sm uppercase ">Frequently Asked Questions</span>
           </div>
 
-          <h2 className="text-4xl  max-w-xl font-bold text-[#1a202c] leading-tight">
+          <h2 className=" text-2xl md:text-4xl  max-w-xl font-bold text-[#1a202c] leading-tight">
             Helping you understand healthcare
           </h2>
 
-          <p className="text-gray-500 text-lg max-w-4xl">
+          <p className="text-gray-500 md:text-lg max-w-4xl">
             Here to make your experience as seamless as possible—explore answers to common questions about our services, policies, and patient care.
           </p>
-          <div className="bg-white p-8 rounded-[40px] shadow-sm flex items-center space-x-6 border border-gray-50 max-w-sm">
+          <div className="bg-white p-4 md:p-8 rounded-[40px] shadow-sm flex items-center space-x-6 border border-gray-50 max-w-sm">
             <div className=" me-5 mb-auto">
               <img src={call} alt="" />
             </div>

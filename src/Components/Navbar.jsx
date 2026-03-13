@@ -33,7 +33,7 @@ const Navbar = () => {
 
         {/* Sidebar / Navigation */}
         <div
-          className={`fixed top-0 left-0 h-full w-1/2 bg-white z-50 transform transition-transform duration-300 ease-in-out
+          className={`fixed top-0 left-0 h-full w-3/6 bg-white z-50 transform transition-transform duration-300 ease-in-out
           ${open ? "translate-x-0" : "-translate-x-full"}
           lg:static lg:translate-x-0 lg:h-auto lg:w-auto lg:bg-transparent lg:block`}
         >
@@ -44,7 +44,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          <ul className="font-medium flex flex-col px-6 space-y-4 lg:flex-row lg:space-y-0 lg:space-x-8 lg:px-0 items-start lg:items-center">
+          <ul className="font-medium flex flex-col px-4 space-y-4 lg:flex-row lg:space-y-0 lg:space-x-8 lg:px-0 items-start lg:items-center">
             
             <li><NavLink to="/" end className={activeClass} onClick={() => setOpen(false)}>Home</NavLink></li>
             <li><NavLink to="/about" className={activeClass} onClick={() => setOpen(false)}>About Us</NavLink></li>
@@ -77,7 +77,7 @@ const Navbar = () => {
               <NavLink
                 to="/book-appointment"
                 onClick={() => setOpen(false)}
-                className="block text-center bg-indigo-500 text-white py-2 px-6 rounded-full w-full"
+                className="block  text-center bg-indigo-500 text-white py-2 sm:px-6 rounded-full w-full"
               >
                 Book Appointment
               </NavLink>

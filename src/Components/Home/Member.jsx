@@ -42,17 +42,17 @@ const Member = ({ limit, showHeading = true }) => {
   const displayedMembers = limit ? teamMembers.slice(0, limit) : teamMembers;
 
   return (
-    <section className="py-24 bg-white">
+    <section className=" py-10 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto ">
         {showHeading && (
-          <div className="text-center mb-20 space-y-4">
+          <div className="text-center mb-10 md:mb-20 space-y-4">
             <div className="flex justify-center items-center gap-2 text-[#5a67d8]">
               <FaStethoscope size={20} />
               <span className="font-semibold uppercase tracking-wider text-sm">
                 Team Members
               </span>
             </div>
-            <h2 className="text-4xl lg:text-6xl max-w-5xl mx-auto font-bold text-[#1a202c]">
+            <h2 className=" text-2xl md:text-4xl lg:text-6xl max-w-5xl mx-auto font-bold text-[#1a202c]">
               Compassionate experts you can trust
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto text-lg leading-relaxed">

@@ -11,7 +11,7 @@ const DoctorDetails = () => {
         Link="Home"
         badge="Dr. esther howard"
       />
-      <div className="flex flex-col md:flex-row h-screen my-8  overflow-hidden ">
+      <div className="flex flex-col md:flex-row md:h-screen my-8  overflow-hidden ">
         <div className="w-full md:w-[400px] bg-[#f3f3ff] h-full rounded-[3rem] flex flex-col z-10 overflow-hidden">
           <div className="rounded-[2.5rem] overflow-hidden flex-1">
             <img
@@ -21,7 +21,7 @@ const DoctorDetails = () => {
             />
           </div>
 
-          <div className="space-y-4 px-14 py-4">
+          <div className="space-y-4 px-7 md:px-14 py-4">
             {[
               { label: "Name:", value: "Dr. Esther howard" },
               { label: "Position:", value: "psychologist" },
@@ -56,9 +56,9 @@ const DoctorDetails = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1 overflow-y-auto p-8 md:p-16 bg-white custom-scrollbar">
+        <div className="flex-1 overflow-y-auto  py-8 md:p-16 bg-white custom-scrollbar">
           <section className="mb-16">
-            <h1 className="text-5xl font-bold text-[#0F172A] mb-8">
+            <h1 className=" text-3xl md:text-5xl font-bold text-[#0F172A] mb-3 md:mb-8">
               Personal biography
             </h1>
             <p className="text-slate-500 leading-relaxed text-lg max-w-5xl">
@@ -73,7 +73,7 @@ const DoctorDetails = () => {
           </section>
           <section className="grid md:grid-cols-2 gap-16 mb-16">
             <div className="space-y-8">
-              <h2 className="text-5xl font-bold text-slate-900">
+              <h2 className=" text-3xl md:text-5xl font-bold text-slate-900">
                 My experience
               </h2>
               <div className="space-y-6">
@@ -99,7 +99,7 @@ const DoctorDetails = () => {
             </div>
 
             <div className="space-y-8">
-              <h2 className="text-5xl font-bold text-slate-900">My skills</h2>
+              <h2 className=" text-3xl md:text-5xl font-bold text-slate-900">My skills</h2>
               <div className="space-y-6">
                 {[
                   { label: "Psychologist", val: "56%" },
@@ -124,7 +124,7 @@ const DoctorDetails = () => {
           </section>
 
           <section className="mb-16">
-            <h2 className="text-5xl font-bold text-slate-900 mb-8">
+            <h2 className="text-2xl md:text-5xl font-bold text-slate-900 mb-2 md:mb-8">
               My expertise area & feature
             </h2>
             <p className="text-slate-500 mb-8 text-lg">
@@ -150,12 +150,9 @@ const DoctorDetails = () => {
               ))}
             </div>
           </section>
-          <section className="bg-[#f3f3ff] rounded-[3rem] p-10 md:p-16 mb-16">
-            <h2 className="text-5xl font-bold text-slate-900 mb-10 flex items-center gap-4">
-              Get in touch with me{" "}
-              <span className="text-red-500 text-3xl italic font-normal">
-                ~
-              </span>
+          <section className="bg-[#f3f3ff] rounded-[3rem] p-6 md:p-16 mb-16">
+            <h2 className="text-2xl md:text-5xl font-bold text-slate-900 mb-10 flex items-center gap-4">
+              Get in touch with me
             </h2>
             <form className="space-y-6">
               <input

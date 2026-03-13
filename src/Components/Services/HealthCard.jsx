@@ -40,20 +40,20 @@ const HealthCard = () => {
   return (
     <>
       <section className="bg-[#f3f3ff] max-w-7xl mx-auto rounded-3xl relative overflow-hidden mb-10 ">
-        <div className="p-10 ">
+        <div className=" p-4 md:p-7 ">
           <div className="flex flex-col justify-between items-center gap-5 text-center">
             <p className="flex text-lg text-indigo-700 font-semibold items-center gap-3">
               <FaStethoscope className="mt-1" size={22} /> how we work
             </p>
-            <h3 className="text-4xl text-[#0b1030] font-bold max-w-lg">
+            <h3 className="text-2xl md:text-4xl text-[#0b1030] font-bold w-full md:max-w-lg">
               We work to achieve better health outcomes
             </h3>
-            <p className="text-lg max-w-2xl text-gray-500">
+            <p className="md:text-lg w-full md:max-w-2xl text-gray-500">
               We are committed to improving health outcomes through personalized
               care, innovative treatments, and a focus on prevention.
             </p>
           </div>
-          <div className="flex flex-wrap mt-10 ">
+          <div className="flex flex-wrap mt-10 justify-center ">
             {HealthCardData.map((card, key) => {
               return (
                 <div className=" w-75 " key={key}>
@@ -63,17 +63,17 @@ const HealthCard = () => {
                       src={card.image}
                       alt="Health Card"
                     />
-                    <div className="relative py-10">
+                    <div className="relative py-5 md:py-10">
                       <hr className="text-gray-400/60    " />
-                      <span className="absolute left-2/5 top-4 flex w-fit px-4 py-3 bg-indigo-500 rounded-full text-white font-bold">
+                      <span className="absolute left-2/5 -top-1 md:top-4 flex w-fit px-4 py-3 bg-indigo-500 rounded-full text-white font-bold">
                         0{card.id}
                       </span>
                     </div>
                     <div className="flex flex-col gap-4 py-4 z-1">
-                      <h3 className=" font-semibold text-xl text-gray-900">
+                      <h3 className="text-center md:text-left font-semibold text-xl text-gray-900">
                         {card.heading}
                       </h3>
-                      <p className="max-w-xs text-lg text-gray-700">
+                      <p className="text-center md:text-left max-w-xs text-lg text-gray-700">
                         {card.description}
                       </p>
                     </div>
@@ -86,7 +86,7 @@ const HealthCard = () => {
         <img
           src={asset60}
           alt="Asset 60"
-          className="w-40  absolute bottom-8 -left-2 opacity-70"
+          className="w-40  absolute bottom-8 -left-2 opacity-25 md:opacity-70"
         />
       </section>
     </>

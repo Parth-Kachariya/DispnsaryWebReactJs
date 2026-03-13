@@ -56,7 +56,7 @@ const Home = () => {
                 </span>
               </div>
 
-              <h1 className="text-4xl  lg:text-6xl font-bold text-[#1a202c] leading-tight">
+              <h1 className=" text-3xl md:text-4xl  lg:text-6xl font-bold text-gray-900 leading-tight">
                 Expert medical care you can rely on
               </h1>
 
@@ -66,10 +66,10 @@ const Home = () => {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <button className="bg-[#5a67d8] text-white text-nowrap cursor-pointer px-8 py-4 rounded-full font-semibold hover:bg-[#4c51bf] transition-all shadow-lg shadow-indigo-200">
+                <button className="bg-[#5a67d8] text-white text-nowrap cursor-pointer px-3 py-2 md:px-8 md:py-4 rounded-full font-semibold hover:bg-[#4c51bf] transition-all shadow-lg shadow-indigo-200">
                   <NavLink to="/book-appointment">Book A Appointment</NavLink>
                 </button>
-                <button className="bg-[#5a67d8] text-white text-nowrap cursor-pointer px-10 py-4 rounded-full font-semibold hover:bg-[#4c51bf] transition-all">
+                <button className="bg-[#5a67d8] text-white text-nowrap cursor-pointer px-4 py-2 md:px-10 md:py-4 rounded-full font-semibold hover:bg-[#4c51bf] transition-all">
                   <NavLink to="/about">About Us</NavLink>
                 </button>
               </div>
@@ -100,7 +100,7 @@ const Home = () => {
                 className="relative z-10 w-full max-w-md object-cover"
               />
 
-              <div className="absolute top-[45%] left-[10%] z-20 bg-white p-4 rounded-2xl shadow-xl border border-gray-50 hidden md:block">
+              <div className="absolute top-[36%] md:top-[45%] left-[3%] md:left-[10%] z-20 bg-white  p-2 md:p-4 rounded-2xl shadow-xl border border-gray-50  md:block">
                 <div className="flex -space-x-2 mb-2 pb-1">
                   {doctors.map((img, index) => (
                     <div
@@ -117,7 +117,7 @@ const Home = () => {
                 </p>
               </div>
 
-              <div className="absolute bottom-[20%] right-[-5%] z-20 bg-white p-4 pr-8 rounded-full shadow-xl flex items-center space-x-4 border border-gray-50 hidden md:flex">
+              <div className="absolute bottom-[6%] md:bottom-[20%] right-[-5%] z-20 bg-white p-2 md:p-4  md:pr-8 rounded-full shadow-xl flex items-center space-x-4 border border-gray-50  md:flex">
                 <div className="bg-[#5a67d8] p-3 rounded-full text-white">
                   <FaUserGroup size={24} />
                 </div>

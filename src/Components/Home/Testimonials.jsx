@@ -4,7 +4,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import asset46 from "../../assets/images/asset46.jpeg";
 import asset47 from "../../assets/images/asset47.jpeg";
 import asset48 from "../../assets/images/asset48.jpeg";
-import Backimg from '../../assets/Backimg.svg'
+import Backimg from "../../assets/Backimg.svg";
 
 const Testimonials = () => {
   const scrollRef = useRef(null);
@@ -41,42 +41,60 @@ const Testimonials = () => {
     const container = scrollRef.current;
     if (container) {
       const card = container.querySelector(".testimonial-card");
-      const cardWidth = card.offsetWidth + parseInt(getComputedStyle(card).marginRight);
-      container.scrollBy({ left: direction === "left" ? -cardWidth : cardWidth, behavior: "smooth" });
+      const cardWidth =
+        card.offsetWidth + parseInt(getComputedStyle(card).marginRight);
+      container.scrollBy({
+        left: direction === "left" ? -cardWidth : cardWidth,
+        behavior: "smooth",
+      });
     }
   };
 
   return (
     <section
-        style={{backgroundImage:`url(${Backimg})`}}
-      className="relative py-20 max-w-7xl mx-auto">
+      style={{ backgroundImage: `url(${Backimg})` }}
+      className="relative py-5 md:py-20 max-w-7xl mx-auto"
+    >
       <div className="mx-auto max-w-7xl">
-        <div className="mb-16 text-center">
+        <div className=" mb-6 md:mb-16 text-center">
           <div className="mb-4 flex items-center justify-center gap-2 text-[#536de6] font-semibold">
             <FaStethoscope size={20} />
             <span>Testimonials</span>
           </div>
-          <h2 className=" max-w-3xl mx-auto mb-6 text-4xl font-bold text-[#0a0e27] md:text-5xl lg:text-6xl">
+          <h2 className=" max-w-3xl mx-auto mb-6 text-3xl font-bold text-[#0a0e27] md:text-5xl lg:text-6xl">
             Patient stories of care and recovery
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-slate-500">
-            Discover inspiring stories of recovery and healing from those we've had the privilege to serve.
+          <p
+            className="mx-auto max-w-2xl 
+          text-lg text-slate-500"
+          >
+            Discover inspiring stories of recovery and healing from those we've
+            had the privilege to serve.
           </p>
         </div>
 
         {/* Scrollable container */}
-        <div ref={scrollRef} className="flex gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory">
+        <div
+          ref={scrollRef}
+          className="flex gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory"
+        >
           {reviews.map((item, index) => (
             <div
               key={index}
-              className="testimonial-card snap-start flex-shrink-0 w-full sm:w-[45%] lg:w-[30%] flex flex-col rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition-all hover:shadow-md"
+              className=" snap-start flex-shrink-0 w-full sm:w-[45%] lg:w-[30%] flex flex-col rounded-3xl border border-slate-100 bg-white p-5  md:p-8 shadow-sm transition-all hover:shadow-md"
             >
               <div className="mb-6 flex gap-1">
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <FaStar key={i} size={18} className="fill-yellow-400 text-yellow-400" />
+                  <FaStar
+                    key={i}
+                    size={18}
+                    className="fill-yellow-400 text-yellow-400"
+                  />
                 ))}
               </div>
-              <p className="mb-8 text-lg leading-relaxed text-slate-600">{item.text}</p>
+              <p className="mb-8 text-lg leading-relaxed text-slate-600">
+                {item.text}
+              </p>
               <div className="mt-auto flex items-center gap-4 border-t border-slate-100 pt-6">
                 <img
                   src={item.image}
@@ -93,7 +111,7 @@ const Testimonials = () => {
         </div>
 
         {/* Buttons */}
-        <div className="mt-12 flex justify-center gap-4">
+        <div className=" mt-6 md:mt-12 flex justify-center gap-4">
           <button
             onClick={() => scroll("left")}
             className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-[#536de6] text-white transition-colors hover:bg-[#435bc7]"

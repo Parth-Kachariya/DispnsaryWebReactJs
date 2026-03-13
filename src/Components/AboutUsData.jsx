@@ -14,7 +14,7 @@ const AboutUsData = () => {
   ];
   return (
     <section>
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20  text-[#1a202c]">
+      <div className="max-w-7xl mx-auto px-3 lg:px-12 py-10 md:py-20  text-[#1a202c]">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           <div className="w-full lg:w-1/2 space-y-6">
             <div className="flex items-center space-x-2 text-[#5a67d8]">
@@ -22,7 +22,7 @@ const AboutUsData = () => {
               <span className="font-semibold text-sm">About Us</span>
             </div>
 
-            <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
+            <h2 className=" text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">
               Professionals dedicated to your health
             </h2>
 
@@ -48,7 +48,7 @@ const AboutUsData = () => {
               ))}
             </div>
 
-            <button className="mt-8 bg-[#5a67d8] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#4c51bf] transition-all shadow-lg">
+            <button className="mt-8 bg-[#5a67d8] text-white px-4 py-3 md:px-8 md:py-4 rounded-full font-semibold hover:bg-[#4c51bf] transition-all shadow-lg">
               <NavLink to="/about">View More About Us</NavLink>
             </button>
           </div>
@@ -62,20 +62,20 @@ const AboutUsData = () => {
               />
             </div>
 
-            <div className="absolute top-[10%] left-[-10%] w-[50%] overflow-hidden rounded-[40px] border-[8px] border-white shadow-2xl">
-              <img src={narse1} alt="Video Support" className="w-full" />
+            <div className="absolute top-[10%] left-[-6%] md:left-[-10%] w-[45%] md:w-[50%] overflow-hidden rounded-[40px] border-8 border-white shadow-2xl">
+              <img src={narse1} alt="Video Support" className=" w-35 md:w-full mx-auto" />
               <div className="bg-[#0a0a23] text-white text-center py-3 text-xs font-bold tracking-widest uppercase">
                 Video Call Support
               </div>
             </div>
 
-            <div className="absolute bottom-[5%] right-[-5%] bg-[#5a67d8] text-white p-8 rounded-[30px] shadow-2xl min-w-[280px]">
+            <div className="absolute bottom-1 md:bottom-[5%] right-[-4%]  md:right-[-5%] bg-[#5a67d8] text-white p-3  md:p-8 rounded-[30px] shadow-2xl min-w-[260px]">
               <div className="absolute -top-6 -right-2 bg-[#0a0a23] p-4 rounded-full border-[6px] border-white">
                 <FaClock size={36} />
               </div>
 
-              <h3 className="text-xl font-bold mb-6">Opening Hours</h3>
-              <div className="space-y-4 font-medium">
+              <h3 className="text-xl font-bold mb-4 md:mb-6">Opening Hours</h3>
+              <div className="md:space-y-4 font-medium">
                 <div className="flex justify-between border-b border-white/20 pb-2">
                   <span>Mon To Fri</span>
                   <span>09:30 – 07:30</span>

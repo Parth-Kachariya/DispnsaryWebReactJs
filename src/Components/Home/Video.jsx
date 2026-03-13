@@ -25,7 +25,7 @@ const Video = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto pb-15">
+    <div className="max-w-7xl mx-auto pb-8 md:pb-15">
       <div className="relative h-[600px] w-full rounded-[40px] overflow-hidden group">
         <img
           src={videoimg}
@@ -34,13 +34,13 @@ const Video = () => {
         />
         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-all duration-500" />
 
-        <div className="absolute inset-0 flex items-center justify-center">
-          <button className="w-24 h-24 cursor-pointer rounded-full border border-white/50 flex items-center justify-center bg-white/10 backdrop-blur-sm hover:scale-110 transition-transform duration-300">
-            <CiPlay1 className="text-white fill-white ml-1" size={32} />
+        <div className="  absolute top-15 left-0 right-0 md:inset-0 flex items-center justify-center">
+          <button className=" size-18  md:size-24 cursor-pointer rounded-full border border-white/50 flex items-center justify-center bg-white/10 backdrop-blur-sm hover:scale-110 transition-transform duration-300">
+            <CiPlay1 className="text-white fill-white ml-1" size={30} />
           </button>
         </div>
 
-        <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent pt-20 pb-12 px-12">
+        <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent pt-20 pb-12 px-6 md:px-12">
           <div className="w-full h-[1px] bg-white/20 mb-10" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

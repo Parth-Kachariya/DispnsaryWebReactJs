@@ -16,7 +16,7 @@ export const BookAppointment = () => {
         badge="Make an appointment"
       />
 
-      <div className="bg-white  my-10 border border-gray-300 w-full max-w-7xl rounded-[3rem] shadow-sm p-8 md:p-16 flex flex-col md:flex-row gap-12 items-center relative overflow-hidden">
+      <div className="bg-white  my-10 border border-gray-300 w-full max-w-7xl rounded-[3rem] shadow-sm p-6 md:p-16 flex flex-col md:flex-row gap-12 items-center relative overflow-hidden">
         {/* Left Side: Form */}
         <div className="w-full md:w-3/5">
           <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
@@ -65,14 +65,14 @@ export const BookAppointment = () => {
               </div>
             </div>
 
-            <button className="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full transition-all shadow-lg shadow-indigo-200 active:scale-95">
+            <button className="mt-4 cursor-pointer bg-indigo-600 hover:bg-indigo-700 text-sm md:text-lg px-4 py-2 text-white font-bold md:py-4 md:px-10 rounded-full transition-all shadow-lg shadow-indigo-200 active:scale-95">
               Book An Appointment
             </button>
           </form>
         </div>
         <div className="w-full md:w-3/5 space-y-8">
           <div>
-            <h2 className="text-5xl font-bold text-slate-900 mb-6">
+            <h2 className=" text-2xl md:text-5xl font-bold text-slate-900 mb-3 md:mb-6">
               Make an appointment
             </h2>
             <p className="text-slate-500 leading-relaxed text-lg">
@@ -84,7 +84,7 @@ export const BookAppointment = () => {
           <div className="space-y-6 pt-4">
             <div className="flex items-start gap-4">
               <div className="p-3 bg-white rounded-xl shadow-sm border border-indigo-50">
-                <img src={appointmentItem1} alt="" />{" "}
+                <img src={appointmentItem1} alt="" className=" w-10 md:w-15" />
               </div>
               <div>
                 <h4 className="text-xl font-bold text-slate-900">
@@ -96,7 +96,7 @@ export const BookAppointment = () => {
             <hr className="text-gray-200" />
             <div className="flex items-start gap-4">
               <div className="p-3 bg-white rounded-xl shadow-sm border border-indigo-50">
-                <img src={appointmentItem2} alt="" />
+                <img src={appointmentItem2} alt=""  className=" w-15 md:w-20" />
               </div>
               <div>
                 <h4 className="text-xl font-bold text-slate-900">
@@ -111,12 +111,8 @@ export const BookAppointment = () => {
         </div>
       </div>
       <HealthCard />
-      <section
-        style={{ backgroundImage: `url(${Backimg})` }}
-        className="max-w-7xl mx-auto "
-      >
-        <Testimonials />
-      </section>
+
+      <Testimonials />
     </section>
   );
 };

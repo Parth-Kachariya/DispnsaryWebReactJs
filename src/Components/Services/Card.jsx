@@ -73,7 +73,7 @@ const Card = ({ number }) => {
         return (
           <div
             key={id}
-            className="border border-gray-300 rounded-3xl max-w-95  p-8 mx-2 md:mx-0"
+            className="border border-gray-300 rounded-3xl max-w-95  p-4  md:p-8 mx-2 md:mx-0"
           >
             <div className="flex justify-between items-center p-4">
               <div className="flex gap-4 items-center">
