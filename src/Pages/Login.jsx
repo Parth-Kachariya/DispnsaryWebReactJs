@@ -9,8 +9,8 @@ const Login = () => {
   return (
     <section className="max-w-7xl mx-auto px-3">
       <PageHeader title="Login Page" Link="Home" badge="Login" />
-      <div className=" flex items-center justify-center p-6 ">
-        <div className="bg-[#f3f3ff] w-full max-w-5xl rounded-[3rem] shadow-xl overflow-hidden flex flex-col md:flex-row min-h-[600px]">
+      <div className=" flex items-center justify-center p-3 md:p-6 ">
+        <div className="bg-[#f3f3ff] w-full max-w-5xl rounded-[3rem] shadow-xl overflow-hidden flex flex-col md:flex-row md:min-h-[600px]">
           <div className="hidden md:block md:w-1/2 relative bg-indigo-600">
             <img
               src={Loginimg}
@@ -25,7 +25,7 @@ const Login = () => {
               </p>
             </div>
           </div>
-          <div className="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center">
+          <div className="w-full md:w-1/2 p-4 md:p-16 flex flex-col justify-center">
             <div className="mb-10 text-center md:text-left">
               <h1 className="text-4xl font-bold text-slate-900 mb-2">Login</h1>
               <p className="text-slate-500">
@@ -67,7 +67,7 @@ const Login = () => {
                 </button>
               </div>
 
-              <button className="w-full cursor-pointer bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-full shadow-lg shadow-indigo-100 transition-all transform active:scale-[0.98]">
+              <button className="w-full cursor-pointer bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 md:py-4 rounded-full shadow-lg shadow-indigo-100 transition-all transform active:scale-[0.98]">
                 Sign In
               </button>
             </form>

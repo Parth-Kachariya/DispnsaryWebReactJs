@@ -10,8 +10,8 @@ const Register = () => {
   return (
     <section className="max-w-7xl mx-auto px-3">
       <PageHeader title="Register Page" Link="home" badge="Register" />
-      <div className="overflow-hidden  flex items-center justify-center p-10 my-10">
-        <div className="bg-[#f3f3ff] overflow-hidden relative  w-full max-w-4xl rounded-[3rem] shadow-xl p-8 md:p-16">
+      <div className="overflow-hidden  flex items-center justify-center md:p-10 my-10">
+        <div className="bg-[#f3f3ff] overflow-hidden relative  w-full max-w-4xl rounded-2xl md:rounded-[3rem] md:shadow-xl p-4 md:p-16">
           <div className="max-w-xl mx-auto text-center mb-12">
             <h1 className="text-4xl font-bold text-slate-900 mb-4">
               Create Account
@@ -117,10 +117,10 @@ const Register = () => {
               </button>
             </div>
           </form>
-          <div className="w-40 h-40 rounded-full bg-[#dfdefe] border-gray-400 absolute -bottom-10 -left-10 opacity-30 border"></div>
-          <div className="w-40 h-40 rounded-full bg-[#dfdefe] border-gray-400 absolute -bottom-10 -right-10 opacity-30 border"></div>
-          <div className="w-40 h-40 rounded-full bg-[#dfdefe] border-gray-400 absolute -top-10 -right-10 opacity-30 border"></div>
-          <div className="w-40 h-40 rounded-full bg-[#dfdefe] border-gray-400 absolute -top-10 -left-10 opacity-30 border"></div>
+          <div className="size-40 hidden md:block rounded-full bg-[#dfdefe] border-gray-400 absolute -bottom-10 -left-10 opacity-30 border"></div>
+          <div className="size-40 hidden md:block rounded-full bg-[#dfdefe] border-gray-400 absolute -bottom-10 -right-10 opacity-30 border"></div>
+          <div className="size-40 hidden md:block rounded-full bg-[#dfdefe] border-gray-400 absolute -top-10 -right-10 opacity-30 border"></div>
+          <div className="size-40 hidden md:block rounded-full bg-[#dfdefe] border-gray-400 absolute -top-10 -left-10 opacity-30 border"></div>
         </div>
       </div>
     </section>

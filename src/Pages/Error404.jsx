@@ -8,9 +8,9 @@ const Error404 = () => {
       <section className="max-w-7xl mx-auto px-3 ">
         <PageHeader title="Page not found" Link="Home" badge="404 Error" />
 
-        <div className="flex flex-col justify-center p-20">
+        <div className="flex flex-col justify-center p-8 md:p-20">
           <img className="w-200 mx-auto " src={error404} alt="" />
-          <h4 className="text-center text-5xl py-3 font-semibold text-gray-900">
+          <h4 className="text-center text-2xl md:text-5xl py-3 font-semibold text-gray-900">
             Oops! Page not found
           </h4>
           <p className="py-3 text-gray-500 text-center max-w-xl mx-auto text-lg">

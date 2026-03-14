@@ -99,7 +99,9 @@ const DoctorDetails = () => {
             </div>
 
             <div className="space-y-8">
-              <h2 className=" text-3xl md:text-5xl font-bold text-slate-900">My skills</h2>
+              <h2 className=" text-3xl md:text-5xl font-bold text-slate-900">
+                My skills
+              </h2>
               <div className="space-y-6">
                 {[
                   { label: "Psychologist", val: "56%" },
@@ -150,7 +152,7 @@ const DoctorDetails = () => {
               ))}
             </div>
           </section>
-          <section className="bg-[#f3f3ff] rounded-[3rem] p-6 md:p-16 mb-16">
+          <section className="bg-[#f3f3ff] rounded-3xl md:rounded-[3rem] p-3 md:p-16  md:mb-16">
             <h2 className="text-2xl md:text-5xl font-bold text-slate-900 mb-10 flex items-center gap-4">
               Get in touch with me
             </h2>
@@ -177,7 +179,7 @@ const DoctorDetails = () => {
                 rows="5"
                 className="w-full bg-white rounded-2xl py-5 px-8 outline-none shadow-sm focus:ring-2 focus:ring-indigo-100 resize-none"
               ></textarea>
-              <button className="bg-indigo-500 text-white font-bold py-5 px-12 rounded-full hover:bg-indigo-600 cursor-pointer transition-all shadow-lg shadow-indigo-200">
+              <button className="bg-indigo-500 text-white font-bold px-4 py-3 md:py-5 md:px-12 rounded-full hover:bg-indigo-600 cursor-pointer transition-all shadow-lg shadow-indigo-200">
                 Submit Now
               </button>
             </form>

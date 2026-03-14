@@ -49,12 +49,12 @@ const AboutUs = () => {
       <AboutUsData />
       <section>
         <div className="flex items-center justify-center">
-          <div className="relative w-full max-w-7xl overflow-hidden rounded-[3.5rem] bg-[#f3f4ff] p-12">
-            <div className="absolute -bottom-10 right-0 opacity-20 md:opacity-70">
+          <div className="relative w-full max-w-7xl overflow-hidden rounded-[3.5rem] bg-[#f3f4ff] p-6 md:p-12">
+            <div className="absolute bottom-0 md:-bottom-10 right-0 opacity-80 md:opacity-90">
               <img
                 src={Stethoscope1}
                 alt=""
-                className="h-80 w-auto object-contain"
+                className=" h-30  md:h-80 w-auto object-contain"
               />
             </div>
 
@@ -74,11 +74,11 @@ const AboutUs = () => {
                     Our Approach
                   </span>
                 </div>
-                <h2 className="mb-6 text-4xl font-bold leading-tight text-[#0a0e27] md:text-5xl lg:text-5xl">
+                <h2 className="mb-6 text-2xl font-bold leading-tight text-[#0a0e27] md:text-5xl lg:text-5xl">
                   Providing personalized healthcare
                 </h2>
 
-                <p className="mb-10 max-w-xl  text-lg text-slate-500 leading-relaxed">
+                <p className="mb-10 max-w-xl  md:text-lg text-slate-500 leading-relaxed">
                   We focus on personalized care to meet your unique needs,
                   combining innovation and compassion for a truly
                   patient-centered approach.
@@ -130,12 +130,12 @@ const AboutUs = () => {
       <VideoSection />
       <HealthCard />
       <Member />
-      <section className="relative overflow-hidden bg-[#f3f4ff] px-6 py-24  rounded-[3.5rem] mx-4 my-8">
+      <section className="relative overflow-hidden bg-[#f3f4ff] px-3 md:px-6 py-24  rounded-[3.5rem] md:mx-4 my-8">
         <div className="absolute bottom-0 right-0 opacity-80">
           <img
             src={Stethoscope1}
             alt=""
-            className="h-96 w-auto object-contain "
+            className=" h-25 md:h-96 w-auto object-contain "
           />
         </div>
         <div className="relative z-10 mx-auto max-w-7xl">
@@ -159,7 +159,7 @@ const AboutUs = () => {
               return (
                 <div
                   key={index}
-                  className="flex flex-col items-start rounded-[3rem] bg-white p-10 shadow-sm transition-all hover:shadow-md"
+                  className="flex flex-col items-start rounded-[3rem] bg-white p-6 md:p-10 shadow-sm transition-all hover:shadow-md"
                 >
                   <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-[#536de6] text-white">
                     <img src={feature.icon} alt="" />
@@ -174,7 +174,7 @@ const AboutUs = () => {
               );
             })}
           </div>
-          <div className="mt-16 flex items-center justify-center gap-3 text-sm md:text-base">
+          <div className=" mt-6 md:mt-16 flex items-center justify-center gap-3 text-sm md:text-base">
             <span className="rounded-full bg-[#536de6] px-4 py-1 text-xs font-bold text-white uppercase tracking-tight">
               Free
             </span>

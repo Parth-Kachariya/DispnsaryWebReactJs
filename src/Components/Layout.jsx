@@ -9,7 +9,7 @@ const Layout = () => {
       <div className=" min-h-screen  flex flex-col">
         <Navbar />
 
-        <main className="pt-20">
+        <main className=" pt-8 md:pt-20">
           <Outlet />
         </main>
 

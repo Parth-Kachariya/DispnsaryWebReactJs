@@ -81,7 +81,7 @@ const Testimonials = () => {
           {reviews.map((item, index) => (
             <div
               key={index}
-              className=" snap-start flex-shrink-0 w-full sm:w-[45%] lg:w-[30%] flex flex-col rounded-3xl border border-slate-100 bg-white p-5  md:p-8 shadow-sm transition-all hover:shadow-md"
+              className=" testimonial-card snap-start flex-shrink-0 w-full sm:w-[45%] lg:w-[30%] flex flex-col rounded-3xl border border-slate-100 bg-white p-5  md:p-8 shadow-sm transition-all hover:shadow-md"
             >
               <div className="mb-6 flex gap-1">
                 {[1, 2, 3, 4, 5].map((i) => (

@@ -173,7 +173,7 @@ const Faq = () => {
         <div className="w-full md:w-2/3 max-h-[90vh] overflow-y-auto pr-6 custom-scrollbar">
           {faqs.map((group, gIndex) => (
             <div key={gIndex} className="mb-16">
-              <h2 className="text-5xl font-bold text-slate-900 mb-10 leading-tight">
+              <h2 className=" text-2xl md:text-5xl font-bold text-slate-900 md:mb-10 leading-tight">
                 {group.section}
               </h2>
               <div className="space-y-2">

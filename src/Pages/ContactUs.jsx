@@ -28,9 +28,9 @@ const ContactUs = () => {
         <PageHeader title="Contact us" Link="Home" badge="Contact us" />
 
         <div>
-          <div className="   p-4 md:p-10">
-            <div className="mx-auto max-w-7xl rounded-[3.5rem] bg-white p-6 md:p-20 shadow-sm border border-slate-100">
-              <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
+          <div className="  mt-5 md:mt-0 p-2 md:p-10">
+            <div className="mx-auto max-w-7xl rounded-3xl md:rounded-[3.5rem] bg-white p-3 md:p-20 shadow-sm border border-slate-100">
+              <div className="grid grid-cols-1 gap-8 md:gap-16 lg:grid-cols-12">
                 <div className="lg:col-span-5 flex flex-col gap-6">
                   <div className="flex flex-col gap-8">
                     {ContactInfoCard.map((item, index) => {
@@ -53,7 +53,7 @@ const ContactUs = () => {
                     })}
                   </div>
 
-                  <div className="mt-8 flex flex-col md:flex-row items-center gap-6">
+                  <div className=" mt-3 md:mt-8 flex justify-center md:justify-start md:flex-row items-center gap-6">
                     <span className="text-xl font-bold text-[#0a0e27]">
                       Follow Us:
                     </span>
@@ -85,7 +85,7 @@ const ContactUs = () => {
                       Contact Us
                     </span>
                   </div>
-                  <h2 className="mb-6 text-4xl font-bold leading-tight text-[#0a0e27] md:text-5xl lg:text-5xl">
+                  <h2 className=" mb-3 md:mb-6 text-2xl font-bold leading-tight text-[#0a0e27] md:text-5xl lg:text-5xl">
                     Reach out for questions
                   </h2>
                   <p className="mb-10 text-slate-500 leading-relaxed">
@@ -119,7 +119,7 @@ const ContactUs = () => {
                     ></textarea>
 
                     <div className="flex justify-start">
-                      <button className=" cursor-pointer rounded-full bg-[#536de6] px-8 py-3 text-lg font-semibold text-white transition-all hover:bg-[#435bc7] hover:shadow-lg active:scale-95">
+                      <button className=" cursor-pointer rounded-full bg-[#536de6] px-4 py-2  md:px-8 md:py-3 text-lg font-semibold text-white transition-all hover:bg-[#435bc7] hover:shadow-lg active:scale-95">
                         Submit Now
                       </button>
                     </div>
@@ -129,7 +129,7 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
-        <div className="bg-white py-16 px-4 ">
+        <div className="bg-white py-8 md:py-16 px-4 ">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <div className="flex items-center justify-center gap-2 text-indigo-600 mb-4">
               <FaStethoscope size={20} />
@@ -138,11 +138,11 @@ const ContactUs = () => {
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+            <h1 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
               Get in touch with us
             </h1>
 
-            <p className="text-slate-500 text-lg leading-relaxed max-w-3xl mx-auto">
+            <p className="text-slate-500 md:text-lg leading-relaxed max-w-3xl mx-auto">
               The goal of our clinic is to deliver compassionate care and
               exceptional medical services, including general health
               consultations, specialized treatments, and preventive care. With
