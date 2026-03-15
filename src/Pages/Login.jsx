@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PageHeader from "../Components/PageHeader";
 import { NavLink } from "react-router-dom";
 import Loginimg from "../assets/images/Loginimg.avif";
@@ -6,6 +6,39 @@ import { MdMailOutline } from "react-icons/md";
 import { CiLock } from "react-icons/ci";
 
 const Login = () => {
+  const [form, setForm] = useState({ email: "", password: "" });
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+    setErrors({ ...errors, [name]: "" });
+  };
+
+  const validate = () => {
+    const newErrors = {};
+    if (!form.email) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
+      newErrors.email = "Enter a valid email";
+    }
+    if (!form.password) {
+      newErrors.password = "Password is required";
+    } else if (form.password.length < 6) {
+      newErrors.password = "Password must be at least 6 characters";
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      console.log("Login successful", form);
+      // TODO: Add login logic
+    }
+  };
+
   return (
     <section className="max-w-7xl mx-auto px-3">
       <PageHeader title="Login Page" Link="Home" badge="Login" />
@@ -33,17 +66,23 @@ const Login = () => {
               </p>
             </div>
 
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="relative group">
                 <MdMailOutline
                   className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-indigo-600 transition-colors"
                   size={20}
                 />
                 <input
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
                   type="email"
                   placeholder="Email Address"
-                  className="w-full bg-white border-none rounded-2xl py-4 pl-14 pr-6 text-indigo-900 focus:ring-2 focus:ring-indigo-500 transition-all outline-none"
+                  className={`w-full bg-white border-none rounded-2xl py-4 pl-14 pr-6 text-indigo-900 focus:ring-2 focus:ring-indigo-500 transition-all outline-none ${
+                    errors.email ? "ring-2 ring-red-500" : ""
+                  }`}
                 />
+                {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
               </div>
 
               <div className="relative group">
@@ -52,10 +91,16 @@ const Login = () => {
                   size={20}
                 />
                 <input
+                  name="password"
+                  value={form.password}
+                  onChange={handleChange}
                   type="password"
                   placeholder="Password"
-                  className="w-full bg-white border-none rounded-2xl py-4 pl-14 pr-6 text-indigo-700 focus:ring-2 focus:ring-indigo-500 transition-all outline-none"
+                  className={`w-full bg-white border-none rounded-2xl py-4 pl-14 pr-6 text-indigo-700 focus:ring-2 focus:ring-indigo-500 transition-all outline-none ${
+                    errors.password ? "ring-2 ring-red-500" : ""
+                  }`}
                 />
+                {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password}</p>}
               </div>
 
               <div className="flex justify-end">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PageHeader from "../Components/PageHeader";
 import { NavLink } from "react-router-dom";
 import { FiUser } from "react-icons/fi";
@@ -7,6 +7,58 @@ import { MdMailOutline } from "react-icons/md";
 import { LuLock } from "react-icons/lu";
 
 const Register = () => {
+  const [form, setForm] = useState({
+    fullName: "",
+    phone: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    acceptTerms: false,
+  });
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setForm({ ...form, [name]: type === "checkbox" ? checked : value });
+    setErrors({ ...errors, [name]: "" });
+  };
+
+  const validate = () => {
+    const newErrors = {};
+    if (!form.fullName.trim()) newErrors.fullName = "Full name is required";
+    if (!form.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+    } else if (form.phone.replace(/\D/g, "").length < 10) {
+      newErrors.phone = "Enter a valid phone number";
+    }
+    if (!form.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
+      newErrors.email = "Enter a valid email";
+    }
+    if (!form.password) {
+      newErrors.password = "Password is required";
+    } else if (form.password.length < 6) {
+      newErrors.password = "Password must be at least 6 characters";
+    }
+    if (!form.confirmPassword) {
+      newErrors.confirmPassword = "Confirm your password";
+    } else if (form.password !== form.confirmPassword) {
+      newErrors.confirmPassword = "Passwords do not match";
+    }
+    if (!form.acceptTerms) newErrors.acceptTerms = "You must accept the terms";
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      console.log("Registration successful", form);
+      // TODO: Add registration logic
+    }
+  };
+
   return (
     <section className="max-w-7xl mx-auto px-3">
       <PageHeader title="Register Page" Link="home" badge="Register" />
@@ -24,7 +76,7 @@ const Register = () => {
 
           <form
             className="grid grid-cols-1 md:grid-cols-2 gap-6"
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={handleSubmit}
           >
             <div className="relative">
               <FiUser
@@ -32,10 +84,16 @@ const Register = () => {
                 size={18}
               />
               <input
+                name="fullName"
+                value={form.fullName}
+                onChange={handleChange}
                 type="text"
                 placeholder="Full Name"
-                className="w-full bg-white border-none rounded-2xl py-4 pl-14 pr-6 text-slate-800 focus:ring-2 focus:ring-indigo-600 outline-none"
+                className={`w-full bg-white border-none rounded-2xl py-4 pl-14 pr-6 text-slate-800 focus:ring-2 focus:ring-indigo-600 outline-none ${
+                  errors.fullName ? "ring-2 ring-red-500" : ""
+                }`}
               />
+              {errors.fullName && <p className="text-red-500 text-sm mt-1">{errors.fullName}</p>}
             </div>
 
             <div className="relative">
@@ -44,10 +102,16 @@ const Register = () => {
                 size={18}
               />
               <input
+                name="phone"
+                value={form.phone}
+                onChange={handleChange}
                 type="tel"
                 placeholder="Phone Number"
-                className="w-full bg-white border-none rounded-2xl py-4 pl-14 pr-6 text-slate-800 focus:ring-2 focus:ring-indigo-600 outline-none"
+                className={`w-full bg-white border-none rounded-2xl py-4 pl-14 pr-6 text-slate-800 focus:ring-2 focus:ring-indigo-600 outline-none ${
+                  errors.phone ? "ring-2 ring-red-500" : ""
+                }`}
               />
+              {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
             </div>
 
             <div className="md:col-span-2 relative">
@@ -56,10 +120,16 @@ const Register = () => {
                 size={18}
               />
               <input
+                name="email"
+                value={form.email}
+                onChange={handleChange}
                 type="email"
                 placeholder="Email Address"
-                className="w-full bg-white border-none rounded-2xl py-4 pl-14 pr-6 text-slate-800 focus:ring-2 focus:ring-indigo-600 outline-none"
+                className={`w-full bg-white border-none rounded-2xl py-4 pl-14 pr-6 text-slate-800 focus:ring-2 focus:ring-indigo-600 outline-none ${
+                  errors.email ? "ring-2 ring-red-500" : ""
+                }`}
               />
+              {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
             </div>
 
             <div className="relative">
@@ -68,10 +138,16 @@ const Register = () => {
                 size={18}
               />
               <input
+                name="password"
+                value={form.password}
+                onChange={handleChange}
                 type="password"
                 placeholder="Password"
-                className="w-full bg-white border-none rounded-2xl py-4 pl-14 pr-6 text-slate-800 focus:ring-2 focus:ring-indigo-600 outline-none"
+                className={`w-full bg-white border-none rounded-2xl py-4 pl-14 pr-6 text-slate-800 focus:ring-2 focus:ring-indigo-600 outline-none ${
+                  errors.password ? "ring-2 ring-red-500" : ""
+                }`}
               />
+              {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password}</p>}
             </div>
 
             <div className="relative">
@@ -80,16 +156,25 @@ const Register = () => {
                 size={18}
               />
               <input
+                name="confirmPassword"
+                value={form.confirmPassword}
+                onChange={handleChange}
                 type="password"
                 placeholder="Confirm Password"
-                className="w-full bg-white border-none rounded-2xl py-4 pl-14 pr-6 text-slate-800 focus:ring-2 focus:ring-indigo-600 outline-none"
+                className={`w-full bg-white border-none rounded-2xl py-4 pl-14 pr-6 text-slate-800 focus:ring-2 focus:ring-indigo-600 outline-none ${
+                  errors.confirmPassword ? "ring-2 ring-red-500" : ""
+                }`}
               />
+              {errors.confirmPassword && <p className="text-red-500 text-sm mt-1">{errors.confirmPassword}</p>}
             </div>
 
             <div className="md:col-span-2 py-4">
               <label className="flex items-center gap-3 cursor-pointer">
                 <input
+                  name="acceptTerms"
                   type="checkbox"
+                  checked={form.acceptTerms}
+                  onChange={handleChange}
                   className="w-5 h-5 rounded border-indigo-200 text-indigo-600 focus:ring-indigo-100"
                 />
                 <span className="text-sm text-slate-500">
@@ -103,6 +188,7 @@ const Register = () => {
                   </button>
                 </span>
               </label>
+              {errors.acceptTerms && <p className="text-red-500 text-sm mt-1">{errors.acceptTerms}</p>}
             </div>
 
             <div className="md:col-span-2 flex flex-col md:flex-row items-center justify-between gap-6 pt-4">
