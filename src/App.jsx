@@ -30,12 +30,11 @@ const App = () => {
           <Route path="faq" element={<Faq />} />
           <Route path="doctors" element={<Doctor />} />
           <Route path="doctor-details/:id" element={<DoctorDetails />} />
+          <Route path="doctor-details" element={<DoctorDetails />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="book-appointment" element={<BookAppointment />} />
-
           <Route path="*" element={<Error404 />} />
-
         </Route>
       </Routes>
     </BrowserRouter>

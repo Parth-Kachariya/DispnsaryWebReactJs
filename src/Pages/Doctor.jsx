@@ -9,6 +9,6 @@ const Doctor = () => {
       <Member showHeading={false} />
     </section>
   );
-};
+}; 
 
 export default Doctor;

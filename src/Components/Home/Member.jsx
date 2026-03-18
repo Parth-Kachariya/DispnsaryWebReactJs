@@ -5,6 +5,7 @@ import {
   FaInstagram,
   FaDribbble,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 // Images import
 import member1 from "../../assets/images/member1.jpeg";
@@ -17,19 +18,46 @@ import member7 from "../../assets/images/member7.jpg";
 import member8 from "../../assets/images/member8.jpg";
 
 const Member = ({ limit, showHeading = true }) => {
+  const navigate = useNavigate();
   const teamMembers = [
-    { name: "Dr. Esther Howard", specialty: "Ophthalmology", image: member1 },
-    { name: "Dr. Jenny Wilson", specialty: "Anesthesiology", image: member2 },
     {
+      id: 1,
+      name: "Dr. Esther Howard",
+      specialty: "Ophthalmology",
+      image: member1,
+    },
+    {
+      id: 2,
+      name: "Dr. Jenny Wilson",
+      specialty: "Anesthesiology",
+      image: member2,
+    },
+    {
+      id: 3,
       name: "Dr. Kristin Watson",
       specialty: "Infectious Disease",
       image: member3,
     },
-    { name: "Dr. Arlene Mccoy", specialty: "Cardiology", image: member4 },
-    { name: "Dr. Michael Jhonson", specialty: "Orthopedics", image: member5 },
-    { name: "Dr. Sarah Lee", specialty: "Pediatrics", image: member6 },
-    { name: "Dr. James Smith", specialty: "Neurology", image: member7 },
-    { name: "Dr. Rachel Davis", specialty: "Dermatology", image: member8 },
+    {
+      id: 4,
+      name: "Dr. Arlene Mccoy",
+      specialty: "Cardiology",
+      image: member4,
+    },
+    {
+      id: 5,
+      name: "Dr. Michael Jhonson",
+      specialty: "Orthopedics",
+      image: member5,
+    },
+    { id: 6, name: "Dr. Sarah Lee", specialty: "Pediatrics", image: member6 },
+    { id: 7, name: "Dr. James Smith", specialty: "Neurology", image: member7 },
+    {
+      id: 8,
+      name: "Dr. Rachel Davis",
+      specialty: "Dermatology",
+      image: member8,
+    },
   ];
 
   const socialIcons = [
@@ -70,7 +98,8 @@ const Member = ({ limit, showHeading = true }) => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  onClick={() => navigate(`/doctor-details/${member.id}`)}
+                  className="w-full h-full cursor-pointer object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
 

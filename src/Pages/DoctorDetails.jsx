@@ -1,30 +1,72 @@
 import { FaCheckCircle, FaPinterestP } from "react-icons/fa";
 import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import PageHeader from "../Components/PageHeader";
+// import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import member1 from "../assets/images/member1.jpeg";
+import member2 from "../assets/images/member2.jpeg";
+import member3 from "../assets/images/member3.jpeg";
+import member4 from "../assets/images/member4.jpeg";
+import member5 from "../assets/images/member5.jpg";
+import member6 from "../assets/images/member6.jpg";
+import member7 from "../assets/images/member7.jpg";
+import member8 from "../assets/images/member8.jpg";
 
+const doctorData = [
+  {
+    id: 1,
+    name: "Dr. Esther Howard",
+    specialty: "Ophthalmology",
+    image: member1,
+  },
+  {
+    id: 2,
+    name: "Dr. Jenny Wilson",
+    specialty: "Anesthesiology",
+    image: member2,
+  },
+  {
+    id: 3,
+    name: "Dr. Kristin Watson",
+    specialty: "Infectious Disease",
+    image: member3,
+  },
+  { id: 4, name: "Dr. Arlene Mccoy", specialty: "Cardiology", image: member4 },
+  {
+    id: 5,
+    name: "Dr. Michael Jhonson",
+    specialty: "Orthopedics",
+    image: member5,
+  },
+  { id: 6, name: "Dr. Sarah Lee", specialty: "Pediatrics", image: member6 },
+  { id: 7, name: "Dr. James Smith", specialty: "Neurology", image: member7 },
+  { id: 8, name: "Dr. Rachel Davis", specialty: "Dermatology", image: member8 },
+];
 const DoctorDetails = () => {
+  const { id } = useParams();
+  const doctor = doctorData.find((doc) => doc.id === id) ||doctorData[0];
+  if (!doctor) {
+    return (
+      <h1 className="text-center my-3 md:my-10 text-red-500 text-xl md:text-4xl font-bold">Doctor Not Found</h1>
+    );
+  }
   return (
     <section className="max-w-7xl mx-auto px-3">
-      <PageHeader
-        title="Dr. esther howard"
-        Link="Home"
-        badge="Dr. esther howard"
-      />
+      <PageHeader title={doctor.name} Link="Home" badge={doctor.name} />
       <div className="flex flex-col md:flex-row md:h-screen my-8  overflow-hidden ">
         <div className="w-full md:w-[400px] bg-[#f3f3ff] h-full rounded-[3rem] flex flex-col z-10 overflow-hidden">
           <div className="rounded-[2.5rem] overflow-hidden flex-1">
             <img
-              src={member1}
-              alt="Dr. Esther Howard"
-              className="w-full h-full  object-cover"
+              src={doctor.image}
+              alt={doctor.name}
+              className="w-full h-[500px]  object-cover"
             />
           </div>
 
           <div className="space-y-4 px-7 md:px-14 py-4">
             {[
-              { label: "Name:", value: "Dr. Esther howard" },
-              { label: "Position:", value: "psychologist" },
+              { label: "Name:", value: doctor.name },
+              { label: "Position:", value: doctor.specialty },
               { label: "Phone:", value: "+91- 123 456 7890" },
               { label: "E-Mail:", value: "info@domain.com" },
               { label: "Experience:", value: "16 years" },
@@ -62,7 +104,7 @@ const DoctorDetails = () => {
               Personal biography
             </h1>
             <p className="text-slate-500 leading-relaxed text-lg max-w-5xl">
-              Dr. Esther Howard is a highly experienced Psychologist with over
+              {doctor.name} is a highly experienced {doctor.specialty} with over
               12 years of expertise in diagnosing and treating a wide range of
               eye conditions. She specializes in advanced procedures like
               cataract surgery, LASIK, and the management of glaucoma and
@@ -71,7 +113,7 @@ const DoctorDetails = () => {
               individual's needs.
             </p>
           </section>
-          <section className="grid md:grid-cols-2 gap-16 mb-16">
+          <section className="grid md:grid-cols-2 gap-13 mb-16">
             <div className="space-y-8">
               <h2 className=" text-3xl md:text-5xl font-bold text-slate-900">
                 My experience
