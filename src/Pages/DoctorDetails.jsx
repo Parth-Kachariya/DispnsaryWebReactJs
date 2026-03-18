@@ -44,7 +44,7 @@ const doctorData = [
 ];
 const DoctorDetails = () => {
   const { id } = useParams();
-  const doctor = doctorData.find((doc) => doc.id === id) ||doctorData[0];
+  const doctor = doctorData.find((doc) => doc.id === Number(id)) && doctorData[0];
   if (!doctor) {
     return (
       <h1 className="text-center my-3 md:my-10 text-red-500 text-xl md:text-4xl font-bold">Doctor Not Found</h1>
