@@ -4,7 +4,7 @@ import Layout from "./Components/Layout";
 import Home from "./Pages/Home";
 import AboutUs from "./Pages/AboutUs";
 import Services from "./Pages/Services";
-import Blog from "./Pages/Blog";      
+import Blog from "./Pages/Blog";
 import ContactUs from "./Pages/ContactUs";
 import Faq from "./Pages/Faq";
 import Doctor from "./Pages/Doctor";
@@ -14,14 +14,11 @@ import Register from "./Pages/Register";
 import BookAppointment from "./Pages/BookAppointment";
 import Error404 from "./Pages/Error404";
 
-
-
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-
           <Route index element={<Home />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="services" element={<Services />} />

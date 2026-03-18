@@ -53,17 +53,17 @@ const DoctorDetails = () => {
   return (
     <section className="max-w-7xl mx-auto px-3">
       <PageHeader title={doctor.name} Link="Home" badge={doctor.name} />
-      <div className="flex flex-col md:flex-row md:h-screen my-8  overflow-hidden ">
-        <div className="w-full md:w-[400px] bg-[#f3f3ff] h-full rounded-[3rem] flex flex-col z-10 overflow-hidden">
-          <div className="rounded-[2.5rem] overflow-hidden flex-1">
+      <div className="flex flex-col md:flex-row  my-8 h-[800px] overflow-hidden ">
+        <div className="w-[400px] h-full  rounded-[3rem] overflow-hidden">
+          <div className="rounded-[2.5rem] h-[400px]">
             <img
               src={doctor.image}
               alt={doctor.name}
-              className="w-full h-[500px]  object-cover"
+              className="object-cover object-top h-full w-full"
             />
           </div>
 
-          <div className="space-y-4 px-7 md:px-14 py-4">
+          <div className="space-y-4 px-7 md:px-14 py-4 bg-[#f3f3ff]">
             {[
               { label: "Name:", value: doctor.name },
               { label: "Position:", value: doctor.specialty },
