@@ -1,0 +1,177 @@
+{
+  "doctors": [
+    {
+      "id": 1,
+      "name": "Dr. Esther Howard",
+      "specialty": "Ophthalmology",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957199/member1_xxez8e.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Dr. Jenny Wilson",
+      "specialty": "Anesthesiology",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957200/member2_wd09rq.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Dr. Kristin Watson",
+      "specialty": "Infectious Disease",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957200/member3_vewxpn.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Dr. Arlene Mccoy",
+      "specialty": "Cardiology",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957200/member4_rrg5lv.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Dr. Michael Jhonson",
+      "specialty": "Orthopedics",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957200/member5_ab41aj.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Dr. Sarah Lee",
+      "specialty": "Pediatrics",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957200/member6_jjbknh.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Dr. James Smith",
+      "specialty": "Neurology",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957200/member7_bc6hbf.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Dr. Rachel Davis",
+      "specialty": "Dermatology",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957201/member8_aodiot.jpg"
+    }
+  ],
+
+  "services": [
+    {
+      "id": 1,
+      "icons": "https://res.cloudinary.com/duhupfplu/image/upload/v1774958449/iconService1_xbj9fb.svg",
+      "type": "urology",
+      "description": "Regular exams are essential for monitoring your overall health and detecting potential issues early.",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957195/cardimg1_fzgifo.jpg"
+    },
+    {
+      "id": 2,
+      "icons": "https://res.cloudinary.com/duhupfplu/image/upload/v1774958451/iconService2_gwyq41.svg",
+      "type": "neurology",
+      "description": "Special care focuses on providing tailored attention to address unique health needs, ensuring optimal well-being and comfort.",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957195/cardimg2_qthneh.jpg"
+    },
+    {
+      "id": 3,
+      "icons": "https://res.cloudinary.com/duhupfplu/image/upload/v1774958429/iconService3_t0egsu.svg",
+      "type": "eye care",
+      "description": "Lab testing is vital for accurately monitoring your health and identifying potential issues early for effective treatment.",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957196/cardimg3_r8ykwn.jpg"
+    },
+    {
+      "id": 4,
+      "icons": "https://res.cloudinary.com/duhupfplu/image/upload/v1774958429/iconService4_p91req.svg",
+      "type": "vaccinations",
+      "description": "Vaccinations are crucial for safeguarding your health and preventing potential illnesses through timely immunization.",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957196/cardimg4_ic2lj9.jpg"
+    },
+    {
+      "id": 5,
+      "icons": "https://res.cloudinary.com/duhupfplu/image/upload/v1774958430/iconService5_gyqa1y.svg",
+      "type": "chronic care",
+      "description": "Chronic care focuses on managing long-term conditions to improve overall health and enhance quality of life.",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957196/cardimg5_d51i9h.jpg"
+    },
+    {
+      "id": 6,
+      "icons": "https://res.cloudinary.com/duhupfplu/image/upload/v1774958432/iconService6_xd0gen.svg",
+      "type": "pharmacy",
+      "description": "Our pharmacy ensures access to essential medications, providing convenience and expert guidance for your health needs.",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957196/cardimg6_jx1ees.jpg"
+    }
+  ],
+
+  "blog": [
+    {
+      "id": 1,
+      "name": "By Joseph",
+      "date": "December 3, 2024",
+      "description": "Research Breakthrough in Heart Disease Treatment",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957195/asset49_cas4iv.jpg"
+    },
+    {
+      "id": 2,
+      "name": "By Joseph",
+      "date": "December 3, 2024",
+      "description": "Research Breakthrough in Heart Disease Treatment",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957195/asset50_xuk1w7.jpg"
+    },
+    {
+      "id": 3,
+      "name": "By Joseph",
+      "date": "December 3, 2024",
+      "description": "Research Breakthrough in Heart Disease Treatment",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957195/asset51_p3nnu8.jpg"
+    },
+    {
+      "id": 4,
+      "name": "By Joseph",
+      "date": "December 3, 2024",
+      "description": "Research Breakthrough in Heart Disease Treatment",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957202/post1_vkzffa.jpg"
+    },
+    {
+      "id": 5,
+      "name": "By Joseph",
+      "date": "December 3, 2024",
+      "description": "Research Breakthrough in Heart Disease Treatment",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957193/post2_upq5lx.jpg"
+    },
+    {
+      "id": 6,
+      "name": "By Joseph",
+      "date": "December 3, 2024",
+      "description": "Research Breakthrough in Heart Disease Treatment",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957193/post3_rxi4b4.jpg"
+    }
+  ],
+
+  "testimonials": [
+    {
+      "id": 1,
+      "auther": "Monika Roy",
+      "position": "Dental Hygienist",
+      "rating": "5",
+      "description": "My first appointment, but the staff was so welcoming. They took the time to listen to my concerns and made sure I felt comfortable.",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957194/asset46_dscliz.jpg"
+    },
+    {
+      "id": 2,
+      "auther": "Monika Roy",
+      "position": "Dental Hygienist",
+      "rating": "5",
+      "description": "My first appointment, but the staff was so welcoming. They took the time to listen to my concerns and made sure I felt comfortable.",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957194/asset47_qhw97d.jpg"
+    },
+    {
+      "id": 3,
+      "auther": "Monika Roy",
+      "position": "Dental Hygienist",
+      "rating": "5",
+      "description": "My first appointment, but the staff was so welcoming. They took the time to listen to my concerns and made sure I felt comfortable.",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957194/asset48_hpsbvu.jpg"
+    },
+    {
+      "id": 4,
+      "auther": "Monika Roy",
+      "position": "Dental Hygienist",
+      "rating": "5",
+      "description": "My first appointment, but the staff was so welcoming. They took the time to listen to my concerns and made sure I felt comfortable.",
+      "image": "https://res.cloudinary.com/duhupfplu/image/upload/v1774957194/asset47_qhw97d.jpg"
+    }
+  ]
+}
